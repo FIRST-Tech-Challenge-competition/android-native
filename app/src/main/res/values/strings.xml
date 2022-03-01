@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Freight Frenzy</string>
+    <string name="register_text">Register</string>
+    <string name="play_a_game_text">Play a game</string>
+    <string name="list_team_score_txt">List Team Score</string>
+    <string name="high_score_txt">High Score</string>
+    <string name="about_the_app_txt">About the app</string>
+    <string name="app_image_desc">App Image</string>
+</resources>
