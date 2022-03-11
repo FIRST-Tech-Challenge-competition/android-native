@@ -6,4 +6,11 @@
     <string name="high_score_txt">High Score</string>
     <string name="about_the_app_txt">About the app</string>
     <string name="app_image_desc">App Image</string>
+    <string name="about_title">Every information about the app</string>
+    <string name="dev_name">Developer: Henry Nguyen (Quoc Hung Nguyen)</string>
+    <string name="student_id">Student ID: 110303395</string>
+    <string name="app_category">Category: Utility</string>
+    <string name="app_lang">Language: English</string>
+    <string name="app_copyright">Copyright: © Henry Nguyen (Quoc Hung Nguyen), Copyright 2021, University of South Australia. All rights reserved</string>
+    <string name="app_disclaimer">Disclaimer: This app and all materials in the app is only used for educational purposes.</string>
 </resources>
