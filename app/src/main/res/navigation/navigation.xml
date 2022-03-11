@@ -20,11 +20,11 @@
             android:id="@+id/action_titleFragment_to_aboutFragment"
             app:destination="@id/aboutFragment" />
         <action
-            android:id="@+id/action_titleFragment_to_highScoreFragment"
-            app:destination="@id/highScoreFragment" />
+            android:id="@+id/action_titleFragment_to_registeredTeamsFragment"
+            app:destination="@id/registeredTeamsFragment" />
         <action
-            android:id="@+id/action_titleFragment_to_scoreFragment"
-            app:destination="@id/scoreFragment" />
+            android:id="@+id/action_titleFragment_to_highScoresFragment"
+            app:destination="@id/highScoresFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
@@ -40,15 +40,73 @@
         android:id="@+id/gameFragment"
         android:name="com.example.freightfrenzy.screens.game.GameFragment"
         android:label="GameFragment"
-        tools:layout="@layout/fragment_game"/>
-    <fragment
-        android:id="@+id/scoreFragment"
-        android:name="com.example.freightfrenzy.screens.score.ScoreFragment"
-        android:label="ScoreFragment"
-        tools:layout="@layout/fragment_score"/>
+        tools:layout="@layout/fragment_game">
+        <action
+            android:id="@+id/action_gameFragment_to_autonomousFragment"
+            app:destination="@id/autonomousFragment" />
+    </fragment>
     <fragment
         android:id="@+id/highScoreFragment"
         android:name="com.example.freightfrenzy.screens.high_score.HighScoreFragment"
         android:label="HighScoreFragment"
         tools:layout="@layout/fragment_high_score"/>
+    <fragment
+        android:id="@+id/autonomousFragment"
+        android:name="com.example.freightfrenzy.screens.autonomous.AutonomousFragment"
+        android:label="AutonomousFragment"
+        tools:layout="@layout/fragment_autonomous">
+        <action
+            android:id="@+id/action_autonomousFragment_to_driverControlledFragment"
+            app:destination="@id/driverControlledFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/driverControlledFragment"
+        android:name="com.example.freightfrenzy.screens.driver_controlled.DriverControlledFragment"
+        android:label="DriverControlledFragment"
+        tools:layout="@layout/fragment_driver_controlled">
+        <action
+            android:id="@+id/action_driverControlledFragment_to_endGameFragment"
+            app:destination="@id/endGameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/endGameFragment"
+        android:name="com.example.freightfrenzy.screens.endgame.EndGameFragment"
+        android:label="EndGameFragment"
+        tools:layout="@layout/fragment_endgame">
+        <action
+            android:id="@+id/action_endGameFragment_to_finalScoreFragment"
+            app:destination="@id/finalScoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/finalScoreFragment"
+        android:name="com.example.freightfrenzy.screens.final_score.FinalScoreFragment"
+        android:label="FinalScoreFragment"
+        tools:layout="@layout/fragment_final_score">
+        <action
+            android:id="@+id/action_finalScoreFragment_to_titleFragment"
+            app:destination="@id/titleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registeredTeamsFragment"
+        android:name="com.example.freightfrenzy.screens.score.RegisteredTeamsFragment"
+        android:label="RegisteredTeamsFragment"
+        tools:layout="@layout/fragment_registered_teams">
+        <action
+            android:id="@+id/action_registeredTeamsFragment_to_registeredTeamFragment"
+            app:destination="@id/registeredTeamFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registeredTeamFragment"
+        android:name="com.example.freightfrenzy.screens.registered_team.RegisteredTeamFragment"
+        android:label="RegisteredTeamFragment"
+        tools:layout="@layout/fragment_registered_team"/>
+    <fragment
+        android:id="@+id/highScoresFragment"
+        android:name="com.example.freightfrenzy.screens.high_scores.HighScoresFragment"
+        android:label="HighScoresFragment"
+        tools:layout="@layout/fragment_high_scores">
+        <action
+            android:id="@+id/action_highScoresFragment_to_highScoreFragment"
+            app:destination="@id/highScoreFragment" />
+    </fragment>
 </navigation>

@@ -19,8 +19,8 @@ class TitleFragment: Fragment() {
         binding.aboutButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_aboutFragment))
         binding.gameButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_gameFragment))
         binding.registerButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_registerFragment))
-        binding.scoreButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_scoreFragment))
-        binding.highScoreButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_highScoreFragment))
+        binding.scoreButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_registeredTeamsFragment))
+        binding.highScoreButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_highScoresFragment))
         return binding.root
     }
 }
