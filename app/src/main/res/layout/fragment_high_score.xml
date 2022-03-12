@@ -12,18 +12,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="N/A"
-            app:layout_constraintBottom_toTopOf="@+id/textView32"
-            app:layout_constraintTop_toBottomOf="@+id/textView30"
-            tools:layout_editor_absoluteX="191dp" />
+            app:layout_constraintBottom_toBottomOf="@+id/textView22"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView22"
+            app:layout_constraintTop_toTopOf="@+id/textView22" />
 
         <TextView
             android:id="@+id/textView32"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="N/A"
-            app:layout_constraintBottom_toTopOf="@+id/textView33"
-            app:layout_constraintTop_toBottomOf="@+id/textView31"
-            tools:layout_editor_absoluteX="192dp" />
+            app:layout_constraintBottom_toBottomOf="@+id/textView5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toTopOf="@+id/textView5" />
 
         <TextView
             android:id="@+id/textView33"
@@ -31,35 +35,43 @@
             android:layout_height="wrap_content"
             android:text="N/A"
             app:layout_constraintBottom_toBottomOf="@+id/textView23"
-            app:layout_constraintTop_toBottomOf="@+id/textView32"
-            tools:layout_editor_absoluteX="193dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView23"
+            app:layout_constraintTop_toTopOf="@+id/textView23" />
 
         <TextView
             android:id="@+id/textView34"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="N/A"
-            app:layout_constraintBottom_toTopOf="@+id/textView35"
-            app:layout_constraintTop_toTopOf="@+id/textView26"
-            tools:layout_editor_absoluteX="239dp" />
+            app:layout_constraintBottom_toBottomOf="@+id/textView26"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView26"
+            app:layout_constraintTop_toTopOf="@+id/textView26" />
 
         <TextView
             android:id="@+id/textView35"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="N/A"
-            app:layout_constraintBottom_toTopOf="@+id/textView36"
-            app:layout_constraintTop_toBottomOf="@+id/textView34"
-            tools:layout_editor_absoluteX="239dp" />
+            app:layout_constraintBottom_toBottomOf="@+id/textView27"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView27"
+            app:layout_constraintTop_toTopOf="@+id/textView27" />
 
         <TextView
             android:id="@+id/textView36"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="N/A"
-            app:layout_constraintBottom_toTopOf="@+id/textView37"
-            app:layout_constraintTop_toBottomOf="@+id/textView35"
-            tools:layout_editor_absoluteX="232dp" />
+            app:layout_constraintBottom_toBottomOf="@+id/textView28"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView28"
+            app:layout_constraintTop_toTopOf="@+id/textView28" />
 
         <TextView
             android:id="@+id/textView37"
@@ -67,8 +79,10 @@
             android:layout_height="wrap_content"
             android:text="N/A"
             app:layout_constraintBottom_toBottomOf="@+id/textView29"
-            app:layout_constraintTop_toBottomOf="@+id/textView36"
-            tools:layout_editor_absoluteX="232dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView29"
+            app:layout_constraintTop_toTopOf="@+id/textView29" />
 
         <TextView
             android:id="@+id/textView17"
@@ -76,8 +90,10 @@
             android:layout_height="wrap_content"
             android:text="Team ID:"
             app:layout_constraintBottom_toTopOf="@+id/textView22"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="30dp" />
+            app:layout_constraintEnd_toStartOf="@+id/textView30"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView22"
@@ -85,8 +101,10 @@
             android:layout_height="wrap_content"
             android:text="Team name:"
             app:layout_constraintBottom_toTopOf="@+id/textView5"
-            app:layout_constraintTop_toBottomOf="@+id/textView17"
-            tools:layout_editor_absoluteX="30dp" />
+            app:layout_constraintEnd_toStartOf="@+id/textView31"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
         <TextView
             android:id="@+id/textView5"
@@ -94,8 +112,10 @@
             android:layout_height="wrap_content"
             android:text="Created time: "
             app:layout_constraintBottom_toTopOf="@+id/textView23"
-            app:layout_constraintTop_toBottomOf="@+id/textView22"
-            tools:layout_editor_absoluteX="30dp" />
+            app:layout_constraintEnd_toStartOf="@+id/textView32"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
         <TextView
             android:id="@+id/textView23"
@@ -103,8 +123,10 @@
             android:layout_height="wrap_content"
             android:text="Team location:"
             app:layout_constraintBottom_toTopOf="@+id/textView24"
-            app:layout_constraintTop_toBottomOf="@+id/textView5"
-            tools:layout_editor_absoluteX="33dp" />
+            app:layout_constraintEnd_toStartOf="@+id/textView33"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
         <TextView
             android:id="@+id/textView24"
@@ -112,8 +134,9 @@
             android:layout_height="wrap_content"
             android:text="Team image:"
             app:layout_constraintBottom_toTopOf="@+id/imageView2"
-            app:layout_constraintTop_toBottomOf="@+id/textView23"
-            tools:layout_editor_absoluteX="34dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView23" />
 
         <TextView
             android:id="@+id/textView25"
@@ -121,35 +144,42 @@
             android:layout_height="wrap_content"
             android:text="Team Result:"
             app:layout_constraintBottom_toTopOf="@+id/textView26"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2"
-            tools:layout_editor_absoluteX="33dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
         <TextView
             android:id="@+id/textView26"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="- Autonomous (Stage 1):"
+            android:text="Stage 1: Autonomous"
             app:layout_constraintBottom_toTopOf="@+id/textView27"
-            app:layout_constraintTop_toBottomOf="@+id/textView25"
-            tools:layout_editor_absoluteX="40dp" />
+            app:layout_constraintEnd_toStartOf="@+id/textView34"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
         <TextView
             android:id="@+id/textView27"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="- Driver Controlled (Stage 2):"
+            android:text="Stage 2: Driver Controlled"
             app:layout_constraintBottom_toTopOf="@+id/textView28"
-            app:layout_constraintTop_toBottomOf="@+id/textView26"
-            tools:layout_editor_absoluteX="34dp" />
+            app:layout_constraintEnd_toStartOf="@+id/textView35"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
         <TextView
             android:id="@+id/textView28"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="- Endgame (Final Stage):"
+            android:text="Final Stage: Endgame"
             app:layout_constraintBottom_toTopOf="@+id/textView29"
-            app:layout_constraintTop_toBottomOf="@+id/textView27"
-            tools:layout_editor_absoluteX="39dp" />
+            app:layout_constraintEnd_toStartOf="@+id/textView36"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
         <TextView
             android:id="@+id/textView29"
@@ -157,25 +187,31 @@
             android:layout_height="wrap_content"
             android:text="Total score:"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView28"
-            tools:layout_editor_absoluteX="39dp" />
+            app:layout_constraintEnd_toStartOf="@+id/textView37"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView28" />
 
         <TextView
             android:id="@+id/textView30"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="N/A"
-            app:layout_constraintBottom_toTopOf="@+id/textView31"
-            app:layout_constraintTop_toTopOf="@+id/textView17"
-            tools:layout_editor_absoluteX="192dp" />
+            app:layout_constraintBottom_toBottomOf="@+id/textView17"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView17"
+            app:layout_constraintTop_toTopOf="@+id/textView17" />
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="241dp"
-            android:layout_height="174dp"
+            android:layout_width="276dp"
+            android:layout_height="197dp"
+            android:contentDescription="Team Image"
             app:layout_constraintBottom_toTopOf="@+id/textView25"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView24"
-            app:srcCompat="@drawable/ic_no_img_available"
-            tools:layout_editor_absoluteX="33dp" />
+            app:srcCompat="@drawable/ic_no_img_available" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

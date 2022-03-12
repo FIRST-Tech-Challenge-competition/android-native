@@ -33,10 +33,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cancel"
-            app:layout_constraintBottom_toTopOf="@+id/recyclerView2"
+            app:layout_constraintBottom_toBottomOf="@+id/searchView2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/searchView2" />
+            app:layout_constraintStart_toEndOf="@+id/searchView2"
+            app:layout_constraintTop_toTopOf="@+id/searchView2" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView2"
