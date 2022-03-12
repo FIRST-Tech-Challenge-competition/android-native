@@ -7,26 +7,33 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Score"
-            app:layout_constraintBottom_toTopOf="@+id/chooseTeamButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <Button
             android:id="@+id/chooseTeamButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Choose selected team"
-            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="93dp"
+            tools:layout_editor_absoluteY="667dp" />
+
+        <SearchView
+            android:layout_width="281dp"
+            android:layout_height="46dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            tools:layout_editor_absoluteX="302dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="0dp"
+            android:layout_height="586dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+            tools:layout_editor_absoluteY="70dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
