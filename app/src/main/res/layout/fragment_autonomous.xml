@@ -8,26 +8,179 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <Switch
+            android:id="@+id/switch9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="319dp"
+            tools:layout_editor_absoluteY="558dp" />
+
+        <Switch
+            android:id="@+id/switch10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="319dp"
+            tools:layout_editor_absoluteY="596dp" />
+
+        <Switch
+            android:id="@+id/switch3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="326dp"
+            tools:layout_editor_absoluteY="236dp" />
+
+        <Switch
+            android:id="@+id/switch4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="326dp"
+            tools:layout_editor_absoluteY="274dp" />
+
+        <Switch
+            android:id="@+id/switch6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="326dp"
+            tools:layout_editor_absoluteY="301dp" />
+
+        <Switch
+            android:id="@+id/switch7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="326dp"
+            tools:layout_editor_absoluteY="408dp" />
+
+        <Switch
+            android:id="@+id/switch8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="326dp"
+            tools:layout_editor_absoluteY="450dp" />
+
+        <Switch
+            android:id="@+id/switch5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="326dp"
+            tools:layout_editor_absoluteY="109dp" />
+
         <TextView
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Autonomous"
-            app:layout_constraintBottom_toTopOf="@+id/driverControlledButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:text="Duck Delivered"
+            tools:layout_editor_absoluteX="70dp"
+            tools:layout_editor_absoluteY="109dp" />
 
         <Button
             android:id="@+id/driverControlledButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Driver-Controlled"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+            android:text="Next Stage"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="654dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Duck"
+            tools:layout_editor_absoluteX="48dp"
+            tools:layout_editor_absoluteY="78dp" />
+
+        <TextView
+            android:id="@+id/textView38"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Parking"
+            tools:layout_editor_absoluteX="43dp"
+            tools:layout_editor_absoluteY="148dp" />
+
+        <Switch
+            android:id="@+id/switch2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="326dp"
+            tools:layout_editor_absoluteY="200dp" />
+
+        <TextView
+            android:id="@+id/textView39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In Alliance Storage Unit"
+            tools:layout_editor_absoluteX="62dp"
+            tools:layout_editor_absoluteY="199dp" />
+
+        <TextView
+            android:id="@+id/textView40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Completely in Storage Unit"
+            tools:layout_editor_absoluteX="68dp"
+            tools:layout_editor_absoluteY="237dp" />
+
+        <TextView
+            android:id="@+id/textView41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In Warehouse"
+            tools:layout_editor_absoluteX="62dp"
+            tools:layout_editor_absoluteY="276dp" />
+
+        <TextView
+            android:id="@+id/textView42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Completely in Warehouse"
+            tools:layout_editor_absoluteX="63dp"
+            tools:layout_editor_absoluteY="313dp" />
+
+        <TextView
+            android:id="@+id/textView43"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Freight"
+            tools:layout_editor_absoluteX="30dp"
+            tools:layout_editor_absoluteY="359dp" />
+
+        <TextView
+            android:id="@+id/textView44"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In Alliance Storage Unit"
+            tools:layout_editor_absoluteX="57dp"
+            tools:layout_editor_absoluteY="408dp" />
+
+        <TextView
+            android:id="@+id/textView45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="On Alliance Shipping Hub"
+            tools:layout_editor_absoluteX="59dp"
+            tools:layout_editor_absoluteY="450dp" />
+
+        <TextView
+            android:id="@+id/textView46"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bonus"
+            tools:layout_editor_absoluteX="41dp"
+            tools:layout_editor_absoluteY="511dp" />
+
+        <TextView
+            android:id="@+id/textView47"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Used Duck"
+            tools:layout_editor_absoluteX="63dp"
+            tools:layout_editor_absoluteY="558dp" />
+
+        <TextView
+            android:id="@+id/textView48"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Used Team Scoring Element"
+            tools:layout_editor_absoluteX="57dp"
+            tools:layout_editor_absoluteY="604dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

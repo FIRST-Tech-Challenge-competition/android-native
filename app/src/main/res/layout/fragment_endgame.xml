@@ -7,26 +7,144 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="40dp"
+            android:layout_height="38dp"
+            android:text="-"
+            tools:layout_editor_absoluteX="355dp"
+            tools:layout_editor_absoluteY="82dp" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="40dp"
+            android:layout_height="38dp"
+            android:text="+"
+            tools:layout_editor_absoluteX="315dp"
+            tools:layout_editor_absoluteY="82dp" />
+
+        <Switch
+            android:id="@+id/switch12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="309dp"
+            tools:layout_editor_absoluteY="173dp" />
+
+        <Switch
+            android:id="@+id/switch13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="309dp"
+            tools:layout_editor_absoluteY="218dp" />
+
+        <Switch
+            android:id="@+id/switch14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="309dp"
+            tools:layout_editor_absoluteY="265dp" />
+
+        <Switch
+            android:id="@+id/switch15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="309dp"
+            tools:layout_editor_absoluteY="344dp" />
+
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="End Game"
-            app:layout_constraintBottom_toTopOf="@+id/finishGameButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:text="Ducks"
+            tools:layout_editor_absoluteX="33dp"
+            tools:layout_editor_absoluteY="52dp" />
 
         <Button
             android:id="@+id/finishGameButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Finish The Game"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+            tools:layout_editor_absoluteX="122dp"
+            tools:layout_editor_absoluteY="522dp" />
+
+        <TextView
+            android:id="@+id/textView61"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ducks Delivered"
+            tools:layout_editor_absoluteX="55dp"
+            tools:layout_editor_absoluteY="91dp" />
+
+        <TextView
+            android:id="@+id/textView62"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            tools:layout_editor_absoluteX="289dp"
+            tools:layout_editor_absoluteY="91dp" />
+
+        <TextView
+            android:id="@+id/textView63"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hubs"
+            tools:layout_editor_absoluteX="33dp"
+            tools:layout_editor_absoluteY="138dp" />
+
+        <TextView
+            android:id="@+id/textView64"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shared Hub Tipped"
+            tools:layout_editor_absoluteX="62dp"
+            tools:layout_editor_absoluteY="173dp" />
+
+        <TextView
+            android:id="@+id/textView65"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shipping Hub Balanced"
+            tools:layout_editor_absoluteX="62dp"
+            tools:layout_editor_absoluteY="218dp" />
+
+        <TextView
+            android:id="@+id/textView66"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shipping Hub Capped"
+            tools:layout_editor_absoluteX="62dp"
+            tools:layout_editor_absoluteY="265dp" />
+
+        <TextView
+            android:id="@+id/textView67"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Parking"
+            tools:layout_editor_absoluteX="30dp"
+            tools:layout_editor_absoluteY="304dp" />
+
+        <TextView
+            android:id="@+id/textView68"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Warehouse"
+            tools:layout_editor_absoluteX="62dp"
+            tools:layout_editor_absoluteY="344dp" />
+
+        <TextView
+            android:id="@+id/textView69"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Completely in Warehouse"
+            tools:layout_editor_absoluteX="62dp"
+            tools:layout_editor_absoluteY="396dp" />
+
+        <Switch
+            android:id="@+id/switch11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="309dp"
+            tools:layout_editor_absoluteY="396dp" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
