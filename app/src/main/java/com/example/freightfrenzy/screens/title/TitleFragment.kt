@@ -6,14 +6,20 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.example.freightfrenzy.R
 import com.example.freightfrenzy.databinding.FragmentTitleBinding
 
 class TitleFragment: Fragment() {
+    private lateinit var titleViewModel: TitleViewModel
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         //return super.onCreateView(inflater, container, savedInstanceState)
         val binding: FragmentTitleBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_title, container, false)
+
+        //Get the ViewModel for this fragment
+        titleViewModel = ViewModelProvider(this).get(TitleViewModel::class.java)
 
         //Set up navigation for all buttons in the title screen
         binding.aboutButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_aboutFragment))
