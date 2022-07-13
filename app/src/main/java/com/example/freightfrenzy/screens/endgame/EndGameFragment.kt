@@ -15,6 +15,7 @@ class EndGameFragment: Fragment() {
     private lateinit var endGameViewModel: EndGameViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        activity?.setTitle("Final stage: End Game")
         val binding: FragmentEndgameBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_endgame, container, false)
 
         //Get the ViewModel for this fragment

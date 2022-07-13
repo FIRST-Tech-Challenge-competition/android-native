@@ -5,11 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Autonomous"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <Switch
-            android:id="@+id/switch9"
+            android:id="@+id/bonus_duck_used"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minWidth="48dp"
@@ -21,7 +22,7 @@
             app:layout_constraintTop_toTopOf="@+id/textView47" />
 
         <Switch
-            android:id="@+id/switch10"
+            android:id="@+id/bonus_team_score_elem_used"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minWidth="48dp"
@@ -33,7 +34,7 @@
             app:layout_constraintTop_toTopOf="@+id/textView48" />
 
         <Switch
-            android:id="@+id/switch3"
+            android:id="@+id/parking_storage_unit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minWidth="48dp"
@@ -45,7 +46,7 @@
             app:layout_constraintTop_toTopOf="@+id/textView40" />
 
         <Switch
-            android:id="@+id/switch4"
+            android:id="@+id/parking_warehouse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minWidth="48dp"
@@ -57,7 +58,7 @@
             app:layout_constraintTop_toTopOf="@+id/textView41" />
 
         <Switch
-            android:id="@+id/switch6"
+            android:id="@+id/parking_completely_warehouse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minWidth="48dp"
@@ -69,7 +70,7 @@
             app:layout_constraintTop_toTopOf="@+id/textView42" />
 
         <Switch
-            android:id="@+id/switch7"
+            android:id="@+id/freight_storage_unit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minWidth="48dp"
@@ -81,7 +82,7 @@
             app:layout_constraintTop_toTopOf="@+id/textView44" />
 
         <Switch
-            android:id="@+id/switch8"
+            android:id="@+id/freight_shipping_hub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minWidth="48dp"
@@ -93,7 +94,7 @@
             app:layout_constraintTop_toTopOf="@+id/textView45" />
 
         <Switch
-            android:id="@+id/switch5"
+            android:id="@+id/duck_delivered"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minWidth="48dp"
@@ -108,9 +109,9 @@
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Duck Delivered"
+            android:text="@string/duck_delivered"
             app:layout_constraintBottom_toTopOf="@+id/textView38"
-            app:layout_constraintEnd_toStartOf="@+id/switch5"
+            app:layout_constraintEnd_toStartOf="@+id/duck_delivered"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -119,7 +120,7 @@
             android:id="@+id/driverControlledButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Next Stage"
+            android:text="@string/next_stage"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -129,7 +130,7 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Duck"
+            android:text="@string/duck"
             app:layout_constraintBottom_toTopOf="@+id/textView6"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -139,14 +140,14 @@
             android:id="@+id/textView38"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Parking"
+            android:text="@string/parking"
             app:layout_constraintBottom_toTopOf="@+id/textView39"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
         <Switch
-            android:id="@+id/switch2"
+            android:id="@+id/parking_alliance_storage_unit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minWidth="48dp"
@@ -161,9 +162,9 @@
             android:id="@+id/textView39"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="In Alliance Storage Unit"
+            android:text="@string/in_alliance_storage_unit"
             app:layout_constraintBottom_toTopOf="@+id/textView40"
-            app:layout_constraintEnd_toStartOf="@+id/switch2"
+            app:layout_constraintEnd_toStartOf="@+id/parking_alliance_storage_unit"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView38" />
@@ -172,9 +173,9 @@
             android:id="@+id/textView40"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Completely in Storage Unit"
+            android:text="@string/completely_in_storage_unit"
             app:layout_constraintBottom_toTopOf="@+id/textView41"
-            app:layout_constraintEnd_toStartOf="@+id/switch3"
+            app:layout_constraintEnd_toStartOf="@+id/parking_storage_unit"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView39" />
@@ -183,9 +184,9 @@
             android:id="@+id/textView41"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="In Warehouse"
+            android:text="@string/in_warehouse"
             app:layout_constraintBottom_toTopOf="@+id/textView42"
-            app:layout_constraintEnd_toStartOf="@+id/switch4"
+            app:layout_constraintEnd_toStartOf="@+id/parking_warehouse"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView40" />
@@ -194,9 +195,9 @@
             android:id="@+id/textView42"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Completely in Warehouse"
+            android:text="@string/completely_in_warehouse"
             app:layout_constraintBottom_toTopOf="@+id/textView43"
-            app:layout_constraintEnd_toStartOf="@+id/switch6"
+            app:layout_constraintEnd_toStartOf="@+id/parking_completely_warehouse"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView41" />
@@ -205,7 +206,7 @@
             android:id="@+id/textView43"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Freight"
+            android:text="@string/freight"
             app:layout_constraintBottom_toTopOf="@+id/textView44"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -215,9 +216,9 @@
             android:id="@+id/textView44"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="In Alliance Storage Unit"
+            android:text="@string/in_alliance_storage_unit"
             app:layout_constraintBottom_toTopOf="@+id/textView45"
-            app:layout_constraintEnd_toStartOf="@+id/switch7"
+            app:layout_constraintEnd_toStartOf="@+id/freight_storage_unit"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView43" />
@@ -226,9 +227,9 @@
             android:id="@+id/textView45"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="On Alliance Shipping Hub"
+            android:text="@string/on_alliance_shipping_hub"
             app:layout_constraintBottom_toTopOf="@+id/textView46"
-            app:layout_constraintEnd_toStartOf="@+id/switch8"
+            app:layout_constraintEnd_toStartOf="@+id/freight_shipping_hub"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView44" />
@@ -237,7 +238,7 @@
             android:id="@+id/textView46"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bonus"
+            android:text="@string/bonus"
             app:layout_constraintBottom_toTopOf="@+id/textView47"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -247,9 +248,9 @@
             android:id="@+id/textView47"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Used Duck"
+            android:text="@string/used_duck"
             app:layout_constraintBottom_toTopOf="@+id/textView48"
-            app:layout_constraintEnd_toStartOf="@+id/switch9"
+            app:layout_constraintEnd_toStartOf="@+id/bonus_duck_used"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView46" />
@@ -258,9 +259,9 @@
             android:id="@+id/textView48"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Used Team Scoring Element"
+            android:text="@string/used_team_scoring_element"
             app:layout_constraintBottom_toTopOf="@+id/driverControlledButton"
-            app:layout_constraintEnd_toStartOf="@+id/switch10"
+            app:layout_constraintEnd_toStartOf="@+id/bonus_team_score_elem_used"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView47" />

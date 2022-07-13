@@ -14,6 +14,7 @@ class RegisteredTeamFragment: Fragment() {
     private lateinit var registeredTeamViewModel: RegisteredTeamViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        activity?.setTitle("Team profile")
         val binding: FragmentRegisteredTeamBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_registered_team, container, false)
 
         //Get the ViewModel for this fragment

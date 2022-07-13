@@ -14,6 +14,7 @@ class RegisterFragment: Fragment() {
     private lateinit var registerViewModel: RegisterViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        activity?.setTitle("Team registration")
         //return super.onCreateView(inflater, container, savedInstanceState)
         val binding: FragmentRegisterBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_register, container, false)
 

@@ -13,4 +13,26 @@
     <string name="app_lang">Language: English</string>
     <string name="app_copyright">Copyright: © Henry Nguyen (Quoc Hung Nguyen), Copyright 2021, University of South Australia. All rights reserved</string>
     <string name="app_disclaimer">Disclaimer: This app and all materials in the app is only used for educational purposes.</string>
+    <string name="duck">Duck</string>
+    <string name="duck_delivered">Duck Delivered</string>
+    <string name="parking">Parking</string>
+    <string name="in_alliance_storage_unit">In Alliance Storage Unit</string>
+    <string name="completely_in_storage_unit">Completely in Storage Unit</string>
+    <string name="in_warehouse">In Warehouse</string>
+    <string name="completely_in_warehouse">Completely in Warehouse</string>
+    <string name="freight">Freight</string>
+    <string name="on_alliance_shipping_hub">On Alliance Shipping Hub</string>
+    <string name="bonus">Bonus</string>
+    <string name="used_duck">Used Duck</string>
+    <string name="used_team_scoring_element">Used Team Scoring Element</string>
+    <string name="next_stage">Next Stage</string>
+    <string name="default_score">0</string>
+    <string name="alliance_storage_unit">Alliance Storage Unit</string>
+    <string name="alliance_shipping_hub">Alliance Shipping Hub</string>
+    <string name="freight_level_1">Freight Level 1</string>
+    <string name="freight_level_2">Freight Level 2</string>
+    <string name="freight_level_3">Freight Level 3</string>
+    <string name="shared_hub">Shared Hub</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
 </resources>

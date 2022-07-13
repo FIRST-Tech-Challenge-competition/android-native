@@ -15,6 +15,7 @@ class TitleFragment: Fragment() {
     private lateinit var titleViewModel: TitleViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        activity?.setTitle("Freight Frenzy")
         //return super.onCreateView(inflater, container, savedInstanceState)
         val binding: FragmentTitleBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_title, container, false)
 

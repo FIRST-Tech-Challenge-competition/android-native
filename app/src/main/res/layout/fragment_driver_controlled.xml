@@ -3,6 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="driverControlledViewModel"
+            type="com.example.freightfrenzy.screens.driver_controlled.DriverControlledViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -11,8 +17,8 @@
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Alliance Storage Unit"
-            app:layout_constraintBottom_toTopOf="@+id/textView49"
+            android:text="@string/alliance_storage_unit"
+            app:layout_constraintBottom_toTopOf="@+id/freight"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -21,17 +27,18 @@
             android:id="@+id/toEndGameButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Next Stage"
+            android:text="@string/next_stage"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView55" />
+            app:layout_constraintTop_toBottomOf="@+id/shared_hub_freight" />
 
         <TextView
-            android:id="@+id/textView49"
+            android:id="@+id/freight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Freight"
+            android:text="@string/freight"
             app:layout_constraintBottom_toTopOf="@+id/textView50"
             app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
             app:layout_constraintHorizontal_bias="0.5"
@@ -42,60 +49,60 @@
             android:id="@+id/textView50"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Alliance Shipping Hub"
-            app:layout_constraintBottom_toTopOf="@+id/textView51"
+            android:text="@string/alliance_shipping_hub"
+            app:layout_constraintBottom_toTopOf="@+id/freight_l1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView49" />
+            app:layout_constraintTop_toBottomOf="@+id/freight" />
 
         <TextView
-            android:id="@+id/textView51"
+            android:id="@+id/freight_l1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Freight Level 1"
-            app:layout_constraintBottom_toTopOf="@+id/textView52"
+            android:text="@string/freight_level_1"
+            app:layout_constraintBottom_toTopOf="@+id/freight_l2"
             app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView50" />
 
         <TextView
-            android:id="@+id/textView52"
+            android:id="@+id/freight_l2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Freight Level 2"
-            app:layout_constraintBottom_toTopOf="@+id/textView53"
+            android:text="@string/freight_level_2"
+            app:layout_constraintBottom_toTopOf="@+id/freight_l3"
             app:layout_constraintEnd_toStartOf="@+id/linearLayout4"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView51" />
+            app:layout_constraintTop_toBottomOf="@+id/freight_l1" />
 
         <TextView
-            android:id="@+id/textView53"
+            android:id="@+id/freight_l3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Freight Level 3"
+            android:text="@string/freight_level_3"
             app:layout_constraintBottom_toTopOf="@+id/textView54"
             app:layout_constraintEnd_toStartOf="@+id/linearLayout5"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView52" />
+            app:layout_constraintTop_toBottomOf="@+id/freight_l2" />
 
         <TextView
             android:id="@+id/textView54"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Shared Hub"
-            app:layout_constraintBottom_toTopOf="@+id/textView55"
+            android:text="@string/shared_hub"
+            app:layout_constraintBottom_toTopOf="@+id/shared_hub_freight"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView53" />
+            app:layout_constraintTop_toBottomOf="@+id/freight_l3" />
 
         <TextView
-            android:id="@+id/textView55"
+            android:id="@+id/shared_hub_freight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Freight"
+            android:text="@string/freight"
             app:layout_constraintBottom_toTopOf="@+id/toEndGameButton"
             app:layout_constraintEnd_toStartOf="@+id/linearLayout6"
             app:layout_constraintHorizontal_bias="0.5"
@@ -108,26 +115,33 @@
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="@+id/textView49"
+            app:layout_constraintBottom_toBottomOf="@+id/freight"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView49"
-            app:layout_constraintTop_toTopOf="@+id/textView49">
+            app:layout_constraintStart_toEndOf="@+id/freight"
+            app:layout_constraintTop_toTopOf="@+id/freight">
 
             <TextView
+                android:id="@+id/freight_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:text="@{driverControlledViewModel.freight}" />
 
             <Button
+                android:id="@+id/freight_score_inc"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="+" />
+                android:text="@string/plus"
+                android:onClick="@{() -> driverControlledViewModel.update_freight(true)}"
+                tools:ignore="DuplicateSpeakableTextCheck" />
 
             <Button
+                android:id="@+id/freight_score_dec"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="-" />
+                android:text="@string/minus"
+                android:onClick="@{() -> driverControlledViewModel.update_freight(false)}"
+                tools:ignore="DuplicateSpeakableTextCheck" />
         </LinearLayout>
 
         <LinearLayout
@@ -136,26 +150,29 @@
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="@+id/textView51"
+            app:layout_constraintBottom_toBottomOf="@+id/freight_l1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView51"
-            app:layout_constraintTop_toTopOf="@+id/textView51">
+            app:layout_constraintStart_toEndOf="@+id/freight_l1"
+            app:layout_constraintTop_toTopOf="@+id/freight_l1">
 
             <TextView
+                android:id="@+id/freight_l1_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:text="@string/default_score" />
 
             <Button
+                android:id="@+id/freight_l1_score_inc"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="+" />
+                android:text="@string/plus" />
 
             <Button
+                android:id="@+id/freight_l1_score_dec"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="-" />
+                android:text="@string/minus" />
         </LinearLayout>
 
         <LinearLayout
@@ -164,26 +181,29 @@
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="@+id/textView52"
+            app:layout_constraintBottom_toBottomOf="@+id/freight_l2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView52"
-            app:layout_constraintTop_toTopOf="@+id/textView52">
+            app:layout_constraintStart_toEndOf="@+id/freight_l2"
+            app:layout_constraintTop_toTopOf="@+id/freight_l2">
 
             <TextView
+                android:id="@+id/freight_l2_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:text="@string/default_score" />
 
             <Button
+                android:id="@+id/freight_l2_score_inc"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="+" />
+                android:text="@string/plus" />
 
             <Button
+                android:id="@+id/freight_l2_score_dec"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="-" />
+                android:text="@string/minus" />
         </LinearLayout>
 
         <LinearLayout
@@ -192,26 +212,29 @@
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="@+id/textView53"
+            app:layout_constraintBottom_toBottomOf="@+id/freight_l3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView53"
-            app:layout_constraintTop_toTopOf="@+id/textView53">
+            app:layout_constraintStart_toEndOf="@+id/freight_l3"
+            app:layout_constraintTop_toTopOf="@+id/freight_l3">
 
             <TextView
+                android:id="@+id/freight_l3_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:text="@string/default_score" />
 
             <Button
+                android:id="@+id/freight_l3_score_inc"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="+" />
+                android:text="@string/plus" />
 
             <Button
+                android:id="@+id/freight_l3_score_dec"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="-" />
+                android:text="@string/minus" />
         </LinearLayout>
 
         <LinearLayout
@@ -220,26 +243,29 @@
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="@+id/textView55"
+            app:layout_constraintBottom_toBottomOf="@+id/shared_hub_freight"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView55"
-            app:layout_constraintTop_toTopOf="@+id/textView55">
+            app:layout_constraintStart_toEndOf="@+id/shared_hub_freight"
+            app:layout_constraintTop_toTopOf="@+id/shared_hub_freight">
 
             <TextView
+                android:id="@+id/shared_hub_freight_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:text="@string/default_score" />
 
             <Button
+                android:id="@+id/shared_hub_freight_score_inc"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="+" />
+                android:text="@string/plus" />
 
             <Button
+                android:id="@+id/shared_hub_freight_score_dec"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="-" />
+                android:text="@string/minus" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

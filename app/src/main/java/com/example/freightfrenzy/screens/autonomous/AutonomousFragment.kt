@@ -8,13 +8,18 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
+import com.example.freightfrenzy.MainActivity
 import com.example.freightfrenzy.R
 import com.example.freightfrenzy.databinding.FragmentAutonomousBinding
 
 class AutonomousFragment: Fragment() {
     private lateinit var autonomousViewModel: AutonomousViewModel
 
+    private var duck_delivered: Boolean = false
+    private var parking_alliance_storage: Boolean = false
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        activity?.setTitle("Stage 1: Autonomous")
         val binding: FragmentAutonomousBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_autonomous, container, false)
 
         //Get the ViewModel for this fragment

@@ -12,19 +12,39 @@
         tools:layout="@layout/fragment_title">
         <action
             android:id="@+id/action_titleFragment_to_registerFragment"
-            app:destination="@id/registerFragment" />
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit" />
         <action
             android:id="@+id/action_titleFragment_to_gameFragment"
-            app:destination="@id/gameFragment" />
+            app:destination="@id/gameFragment"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit" />
         <action
             android:id="@+id/action_titleFragment_to_aboutFragment"
-            app:destination="@id/aboutFragment" />
+            app:destination="@id/aboutFragment"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit" />
         <action
             android:id="@+id/action_titleFragment_to_registeredTeamsFragment"
-            app:destination="@id/registeredTeamsFragment" />
+            app:destination="@id/registeredTeamsFragment"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit" />
         <action
             android:id="@+id/action_titleFragment_to_highScoresFragment"
-            app:destination="@id/highScoresFragment" />
+            app:destination="@id/highScoresFragment"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
@@ -43,7 +63,11 @@
         tools:layout="@layout/fragment_game">
         <action
             android:id="@+id/action_gameFragment_to_autonomousFragment"
-            app:destination="@id/autonomousFragment" />
+            app:destination="@id/autonomousFragment"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit" />
     </fragment>
     <fragment
         android:id="@+id/highScoreFragment"
@@ -57,7 +81,11 @@
         tools:layout="@layout/fragment_autonomous">
         <action
             android:id="@+id/action_autonomousFragment_to_driverControlledFragment"
-            app:destination="@id/driverControlledFragment" />
+            app:destination="@id/driverControlledFragment"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit" />
     </fragment>
     <fragment
         android:id="@+id/driverControlledFragment"
@@ -66,7 +94,11 @@
         tools:layout="@layout/fragment_driver_controlled">
         <action
             android:id="@+id/action_driverControlledFragment_to_endGameFragment"
-            app:destination="@id/endGameFragment" />
+            app:destination="@id/endGameFragment"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit" />
     </fragment>
     <fragment
         android:id="@+id/endGameFragment"
@@ -75,7 +107,11 @@
         tools:layout="@layout/fragment_endgame">
         <action
             android:id="@+id/action_endGameFragment_to_finalScoreFragment"
-            app:destination="@id/finalScoreFragment" />
+            app:destination="@id/finalScoreFragment"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit" />
     </fragment>
     <fragment
         android:id="@+id/finalScoreFragment"
@@ -84,7 +120,11 @@
         tools:layout="@layout/fragment_final_score">
         <action
             android:id="@+id/action_finalScoreFragment_to_titleFragment"
-            app:destination="@id/titleFragment" />
+            app:destination="@id/titleFragment"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit" />
     </fragment>
     <fragment
         android:id="@+id/registeredTeamsFragment"
@@ -93,7 +133,11 @@
         tools:layout="@layout/fragment_registered_teams">
         <action
             android:id="@+id/action_registeredTeamsFragment_to_registeredTeamFragment"
-            app:destination="@id/registeredTeamFragment" />
+            app:destination="@id/registeredTeamFragment"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit" />
     </fragment>
     <fragment
         android:id="@+id/registeredTeamFragment"
@@ -107,6 +151,10 @@
         tools:layout="@layout/fragment_high_scores">
         <action
             android:id="@+id/action_highScoresFragment_to_highScoreFragment"
-            app:destination="@id/highScoreFragment" />
+            app:destination="@id/highScoreFragment"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit" />
     </fragment>
 </navigation>
