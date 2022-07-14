@@ -11,7 +11,7 @@
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Game Summary"
+            android:text="@string/game_summary"
             app:layout_constraintBottom_toTopOf="@+id/textView70"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -21,7 +21,7 @@
             android:id="@+id/backHomeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Save Score"
+            android:text="@string/save_score"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,9 +31,9 @@
             android:id="@+id/textView70"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Autonomous"
+            android:text="@string/autonomous"
             app:layout_constraintBottom_toTopOf="@+id/textView71"
-            app:layout_constraintEnd_toStartOf="@+id/textView74"
+            app:layout_constraintEnd_toStartOf="@+id/autonomous_score"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView9" />
@@ -42,9 +42,9 @@
             android:id="@+id/textView71"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Driver Controlled"
+            android:text="@string/driver_controlled"
             app:layout_constraintBottom_toTopOf="@+id/textView72"
-            app:layout_constraintEnd_toStartOf="@+id/textView75"
+            app:layout_constraintEnd_toStartOf="@+id/driver_controlled_score"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView70" />
@@ -53,9 +53,9 @@
             android:id="@+id/textView72"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Endgame"
+            android:text="@string/endgame"
             app:layout_constraintBottom_toTopOf="@+id/textView73"
-            app:layout_constraintEnd_toStartOf="@+id/textView76"
+            app:layout_constraintEnd_toStartOf="@+id/end_game_score"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView71" />
@@ -64,18 +64,18 @@
             android:id="@+id/textView73"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Total"
-            app:layout_constraintBottom_toTopOf="@+id/textView78"
-            app:layout_constraintEnd_toStartOf="@+id/textView77"
+            android:text="@string/total"
+            app:layout_constraintBottom_toTopOf="@+id/button12"
+            app:layout_constraintEnd_toStartOf="@+id/total_score"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView72" />
 
         <TextView
-            android:id="@+id/textView74"
+            android:id="@+id/autonomous_score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
+            android:text="@string/default_score"
             app:layout_constraintBottom_toBottomOf="@+id/textView70"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -83,10 +83,10 @@
             app:layout_constraintTop_toTopOf="@+id/textView70" />
 
         <TextView
-            android:id="@+id/textView75"
+            android:id="@+id/driver_controlled_score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
+            android:text="@string/default_score"
             app:layout_constraintBottom_toBottomOf="@+id/textView71"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -94,10 +94,10 @@
             app:layout_constraintTop_toTopOf="@+id/textView71" />
 
         <TextView
-            android:id="@+id/textView76"
+            android:id="@+id/end_game_score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
+            android:text="@string/default_score"
             app:layout_constraintBottom_toBottomOf="@+id/textView72"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -105,35 +105,24 @@
             app:layout_constraintTop_toTopOf="@+id/textView72" />
 
         <TextView
-            android:id="@+id/textView77"
+            android:id="@+id/total_score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
+            android:text="@string/default_score"
             app:layout_constraintBottom_toBottomOf="@+id/textView73"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/textView73"
             app:layout_constraintTop_toTopOf="@+id/textView73" />
 
-        <TextView
-            android:id="@+id/textView78"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Do you want to submit your score to high score table ?"
-            android:textAlignment="center"
-            app:layout_constraintBottom_toTopOf="@+id/button12"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView73" />
-
         <Button
             android:id="@+id/button12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Submit high score"
+            android:text="@string/submit_high_score"
             app:layout_constraintBottom_toTopOf="@+id/backHomeButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView78" />
+            app:layout_constraintTop_toBottomOf="@+id/textView73" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

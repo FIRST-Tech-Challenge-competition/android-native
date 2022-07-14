@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import com.example.freightfrenzy.R
 import com.example.freightfrenzy.databinding.FragmentHighScoresBinding
 
@@ -22,7 +23,7 @@ class HighScoresFragment: Fragment() {
         highScoresViewModel = ViewModelProvider(this).get(HighScoresViewModel::class.java)
 
         //Set up navigation for all buttons in the screen
-        binding.selectHighScoreTeam.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_highScoresFragment_to_highScoreFragment))
+        binding.selectHighScoreTeam.setOnClickListener{ view!!.findNavController().navigate(HighScoresFragmentDirections.actionHighScoresFragmentToHighScoreFragment()) }
         return binding.root
     }
 }

@@ -35,4 +35,19 @@
     <string name="shared_hub">Shared Hub</string>
     <string name="plus">+</string>
     <string name="minus">-</string>
+    <string name="ducks">Ducks</string>
+    <string name="finish_the_game">Finish The Game</string>
+    <string name="ducks_delivered">Ducks Delivered</string>
+    <string name="hubs">Hubs</string>
+    <string name="shared_hub_tipped">Shared Hub Tipped</string>
+    <string name="shipping_hub_balanced">Shipping Hub Balanced</string>
+    <string name="shipping_hub_capped">Shipping Hub Capped</string>
+    <string name="warehouse">Warehouse</string>
+    <string name="save_score">Save Score</string>
+    <string name="submit_high_score">Submit high score</string>
+    <string name="game_summary">Game Summary</string>
+    <string name="autonomous">Autonomous</string>
+    <string name="driver_controlled">Driver Controlled</string>
+    <string name="endgame">Endgame</string>
+    <string name="total">Total</string>
 </resources>

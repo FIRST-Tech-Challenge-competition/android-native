@@ -160,19 +160,21 @@
                 android:id="@+id/freight_l1_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/default_score" />
+                android:text="@{driverControlledViewModel.freight_l1}" />
 
             <Button
                 android:id="@+id/freight_l1_score_inc"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="@string/plus" />
+                android:text="@string/plus"
+                android:onClick="@{() -> driverControlledViewModel.update_freight_l1(true)}" />
 
             <Button
                 android:id="@+id/freight_l1_score_dec"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="@string/minus" />
+                android:text="@string/minus"
+                android:onClick="@{() -> driverControlledViewModel.update_freight_l1(false)}"/>
         </LinearLayout>
 
         <LinearLayout
@@ -191,19 +193,21 @@
                 android:id="@+id/freight_l2_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/default_score" />
+                android:text="@{driverControlledViewModel.freight_l2}" />
 
             <Button
                 android:id="@+id/freight_l2_score_inc"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="@string/plus" />
+                android:text="@string/plus"
+                android:onClick="@{() -> driverControlledViewModel.update_freight_l2(true)}"/>
 
             <Button
                 android:id="@+id/freight_l2_score_dec"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="@string/minus" />
+                android:text="@string/minus"
+                android:onClick="@{() -> driverControlledViewModel.update_freight_l2(false)}"/>
         </LinearLayout>
 
         <LinearLayout
@@ -222,19 +226,21 @@
                 android:id="@+id/freight_l3_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/default_score" />
+                android:text="@{driverControlledViewModel.freight_l3}" />
 
             <Button
                 android:id="@+id/freight_l3_score_inc"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="@string/plus" />
+                android:text="@string/plus"
+                android:onClick="@{() -> driverControlledViewModel.update_freight_l3(true)}"/>
 
             <Button
                 android:id="@+id/freight_l3_score_dec"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="@string/minus" />
+                android:text="@string/minus"
+                android:onClick="@{() -> driverControlledViewModel.update_freight_l3(false)}"/>
         </LinearLayout>
 
         <LinearLayout
@@ -253,19 +259,21 @@
                 android:id="@+id/shared_hub_freight_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/default_score" />
+                android:text="@{driverControlledViewModel.shared_hub_freight}" />
 
             <Button
                 android:id="@+id/shared_hub_freight_score_inc"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="@string/plus" />
+                android:text="@string/plus"
+                android:onClick="@{() -> driverControlledViewModel.update_shared_hub_freight(true)}"/>
 
             <Button
                 android:id="@+id/shared_hub_freight_score_dec"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="@string/minus" />
+                android:text="@string/minus"
+                android:onClick="@{() -> driverControlledViewModel.update_shared_hub_freight((false))}"/>
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

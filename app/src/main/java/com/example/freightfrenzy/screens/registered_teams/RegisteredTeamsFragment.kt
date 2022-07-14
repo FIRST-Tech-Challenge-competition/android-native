@@ -1,4 +1,4 @@
-package com.example.freightfrenzy.screens.score
+package com.example.freightfrenzy.screens.registered_teams
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import com.example.freightfrenzy.R
 import com.example.freightfrenzy.databinding.FragmentRegisteredTeamsBinding
 import com.example.freightfrenzy.screens.registered_teams.RegisteredTeamsViewModel
@@ -23,7 +24,7 @@ class RegisteredTeamsFragment: Fragment() {
         registeredTeamsViewModel = ViewModelProvider(this).get(RegisteredTeamsViewModel::class.java)
 
         //Set up navigation for all button(s) on the screen
-        binding.chooseTeamButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_registeredTeamsFragment_to_registeredTeamFragment))
+        binding.chooseTeamButton.setOnClickListener{ view!!.findNavController().navigate(RegisteredTeamsFragmentDirections.actionRegisteredTeamsFragmentToRegisteredTeamFragment()) }
         return binding.root
     }
 }

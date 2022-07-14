@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import com.example.freightfrenzy.R
 import com.example.freightfrenzy.databinding.FragmentGameBinding
 
@@ -22,7 +23,7 @@ class GameFragment: Fragment() {
         gameViewModel = ViewModelProvider(this).get(GameViewModel::class.java)
 
         //Set up navigation for all buttons on the screen
-        binding.startGameButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_gameFragment_to_autonomousFragment))
+        binding.startGameButton.setOnClickListener{ view!!.findNavController().navigate(GameFragmentDirections.actionGameFragmentToAutonomousFragment()) }
         return binding.root
     }
 }

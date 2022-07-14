@@ -99,6 +99,9 @@
             app:exitAnim="@anim/exit"
             app:popEnterAnim="@anim/pop_enter"
             app:popExitAnim="@anim/pop_exit" />
+        <argument
+            android:name="autonomous_score"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/endGameFragment"
@@ -112,6 +115,11 @@
             app:exitAnim="@anim/exit"
             app:popEnterAnim="@anim/pop_enter"
             app:popExitAnim="@anim/pop_exit" />
+        <argument android:name="autonomous_score"
+            app:argType="integer" />
+        <argument
+            android:name="driver_controlled_score"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/finalScoreFragment"
@@ -125,10 +133,19 @@
             app:exitAnim="@anim/exit"
             app:popEnterAnim="@anim/pop_enter"
             app:popExitAnim="@anim/pop_exit" />
+        <argument
+            android:name="autonomous_score"
+            app:argType="integer" />
+        <argument
+            android:name="driver_controlled_score"
+            app:argType="integer" />
+        <argument
+            android:name="end_game_score"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/registeredTeamsFragment"
-        android:name="com.example.freightfrenzy.screens.score.RegisteredTeamsFragment"
+        android:name="com.example.freightfrenzy.screens.registered_teams.RegisteredTeamsFragment"
         android:label="RegisteredTeamsFragment"
         tools:layout="@layout/fragment_registered_teams">
         <action
