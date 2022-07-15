@@ -3,19 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <data>
+        <variable
+            name="registerViewModel"
+            type="com.example.freightfrenzy.screens.register.RegisterViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <EditText
-            android:id="@+id/editTextTextPersonName3"
+            android:id="@+id/teamID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="E.g: 12345"
             android:inputType="numberDecimal"
             android:minHeight="48dp"
-            android:textColorHint="@android:color/darker_gray"
+            android:textColorHint="#757575"
             app:layout_constraintBottom_toBottomOf="@+id/textView18"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -23,14 +29,14 @@
             app:layout_constraintTop_toTopOf="@+id/textView18" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName5"
+            android:id="@+id/region"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="E.g: Adelaide, SA"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:textColorHint="@android:color/darker_gray"
+            android:textColorHint="#757575"
             app:layout_constraintBottom_toBottomOf="@+id/textView19"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -38,14 +44,14 @@
             app:layout_constraintTop_toTopOf="@+id/textView19" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName4"
+            android:id="@+id/robotName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="E.g: EVE"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:textColorHint="@android:color/darker_gray"
+            android:textColorHint="#757575"
             app:layout_constraintBottom_toBottomOf="@+id/textView20"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -58,7 +64,7 @@
             android:layout_height="wrap_content"
             android:text="Team ID :"
             app:layout_constraintBottom_toTopOf="@+id/textView19"
-            app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName3"
+            app:layout_constraintEnd_toStartOf="@+id/teamID"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -69,7 +75,7 @@
             android:layout_height="wrap_content"
             android:text="Region (Optional) :"
             app:layout_constraintBottom_toTopOf="@+id/textView20"
-            app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName5"
+            app:layout_constraintEnd_toStartOf="@+id/region"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView18" />
@@ -80,7 +86,7 @@
             android:layout_height="wrap_content"
             android:text="Robot Name(Optional) :"
             app:layout_constraintBottom_toTopOf="@+id/textView21"
-            app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName4"
+            app:layout_constraintEnd_toStartOf="@+id/robotName"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView19" />
@@ -90,20 +96,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Choose an image for your team :"
-            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintBottom_toTopOf="@+id/chooseImage"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView20" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="367dp"
-            android:layout_height="258dp"
-            android:text="Button"
-            app:layout_constraintBottom_toTopOf="@+id/switch1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
         <Switch
             android:id="@+id/switch1"
@@ -114,17 +110,17 @@
             app:layout_constraintBottom_toTopOf="@+id/button14"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button" />
+            app:layout_constraintTop_toBottomOf="@+id/chooseImage" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/teamName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="E.g: abc"
+            android:hint="E.g: ab12c"
             android:inputType="textPersonName|text"
             android:minHeight="48dp"
-            android:textColorHint="@android:color/darker_gray"
+            android:textColorHint="#757575"
             app:layout_constraintBottom_toBottomOf="@+id/textView3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -137,7 +133,7 @@
             android:layout_height="wrap_content"
             android:text="Team Name :"
             app:layout_constraintBottom_toTopOf="@+id/textView18"
-            app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName2"
+            app:layout_constraintEnd_toStartOf="@+id/teamName"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -151,5 +147,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/switch1" />
+
+        <ImageView
+            android:id="@+id/chooseImage"
+            android:layout_width="367dp"
+            android:layout_height="271dp"
+            android:background="@drawable/border_img"
+            android:clickable="true"
+            app:layout_constraintBottom_toTopOf="@+id/switch1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView21"
+            app:srcCompat="@drawable/ic_upload_img" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
