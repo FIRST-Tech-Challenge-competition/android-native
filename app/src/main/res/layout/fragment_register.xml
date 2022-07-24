@@ -15,149 +15,112 @@
 
         <EditText
             android:id="@+id/teamID"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="366dp"
+            android:layout_height="48dp"
             android:ems="10"
-            android:hint="E.g: 12345"
+            android:hint="Team's ID. E.g: 12345"
+            android:importantForAutofill="no"
             android:inputType="numberDecimal"
             android:minHeight="48dp"
             android:textColorHint="#757575"
-            app:layout_constraintBottom_toBottomOf="@+id/textView18"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/robotName"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView18"
-            app:layout_constraintTop_toTopOf="@+id/textView18" />
-
-        <EditText
-            android:id="@+id/region"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="E.g: Adelaide, SA"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:textColorHint="#757575"
-            app:layout_constraintBottom_toBottomOf="@+id/textView19"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView19"
-            app:layout_constraintTop_toTopOf="@+id/textView19" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/teamName" />
 
         <EditText
             android:id="@+id/robotName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="366dp"
+            android:layout_height="48dp"
             android:ems="10"
-            android:hint="E.g: EVE"
+            android:hint="Team's robot name (Optional). E.g: EVE"
+            android:importantForAutofill="no"
             android:inputType="textPersonName"
             android:minHeight="48dp"
             android:textColorHint="#757575"
-            app:layout_constraintBottom_toBottomOf="@+id/textView20"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView20"
-            app:layout_constraintTop_toTopOf="@+id/textView20" />
-
-        <TextView
-            android:id="@+id/textView18"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Team ID :"
+            android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@+id/textView19"
-            app:layout_constraintEnd_toStartOf="@+id/teamID"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            app:layout_constraintTop_toBottomOf="@+id/teamID" />
 
         <TextView
             android:id="@+id/textView19"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Region (Optional) :"
-            app:layout_constraintBottom_toTopOf="@+id/textView20"
-            app:layout_constraintEnd_toStartOf="@+id/region"
-            app:layout_constraintHorizontal_bias="0.5"
+            android:text="@string/location_optional"
+            app:layout_constraintBottom_toTopOf="@+id/mapView"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+            app:layout_constraintTop_toBottomOf="@+id/robotName" />
 
         <TextView
-            android:id="@+id/textView20"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Robot Name(Optional) :"
-            app:layout_constraintBottom_toTopOf="@+id/textView21"
-            app:layout_constraintEnd_toStartOf="@+id/robotName"
-            app:layout_constraintHorizontal_bias="0.5"
+            android:id="@+id/addImageText"
+            android:layout_width="122dp"
+            android:layout_height="34dp"
+            android:clickable="true"
+            android:minHeight="48dp"
+            android:text="Add team's photo"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_blue_dark"
+            app:layout_constraintBottom_toTopOf="@+id/teamName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chooseImage"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/teamName"
+            android:layout_width="366dp"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:hint="Team's name. E.g: ab12c"
+            android:inputType="textPersonName|text"
+            android:minHeight="48dp"
+            android:textColorHint="#757575"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/teamID"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addImageText" />
+
+        <ImageView
+            android:id="@+id/chooseImage"
+            android:layout_width="184dp"
+            android:layout_height="149dp"
+            android:background="@drawable/border_img"
+            android:clickable="true"
+            android:contentDescription="upload_img"
+            app:layout_constraintBottom_toTopOf="@+id/addImageText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_upload_img" />
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="387dp"
+            android:layout_height="233dp"
+            android:contentDescription="Google Map"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
         <TextView
-            android:id="@+id/textView21"
+            android:id="@+id/register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Choose an image for your team :"
-            app:layout_constraintBottom_toTopOf="@+id/chooseImage"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView20" />
-
-        <Switch
-            android:id="@+id/switch1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:minHeight="48dp"
-            android:text="Allow sharing score with other teams"
-            app:layout_constraintBottom_toTopOf="@+id/button14"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chooseImage" />
-
-        <EditText
-            android:id="@+id/teamName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="E.g: ab12c"
-            android:inputType="textPersonName|text"
-            android:minHeight="48dp"
-            android:textColorHint="#757575"
-            app:layout_constraintBottom_toBottomOf="@+id/textView3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView3"
-            app:layout_constraintTop_toTopOf="@+id/textView3" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Team Name :"
-            app:layout_constraintBottom_toTopOf="@+id/textView18"
-            app:layout_constraintEnd_toStartOf="@+id/teamName"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/button14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Register"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/switch1" />
-
-        <ImageView
-            android:id="@+id/chooseImage"
-            android:layout_width="367dp"
-            android:layout_height="271dp"
-            android:background="@drawable/border_img"
             android:clickable="true"
-            app:layout_constraintBottom_toTopOf="@+id/switch1"
+            android:minHeight="48dp"
+            android:text="Add Team"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/chooseImage"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView21"
-            app:srcCompat="@drawable/ic_upload_img" />
+            app:layout_constraintStart_toEndOf="@+id/chooseImage"
+            app:layout_constraintTop_toTopOf="@+id/chooseImage" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -8,7 +8,9 @@ import androidx.lifecycle.ViewModel
 class EndGameViewModel: ViewModel() {
     private var _ducks_delivered = MutableLiveData<Int>()
 
-    val ducks_delivered = Transformations.map(_ducks_delivered, {ducks -> ducks.toString()})
+    val ducks_delivered = Transformations.map(_ducks_delivered, {ducks ->
+        "\t\t\t" + ducks.toString() + "\t"
+    })
 
     private val min_score = 0
     private val max_ducks_delivered_score = 6

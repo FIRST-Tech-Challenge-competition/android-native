@@ -50,4 +50,10 @@
     <string name="driver_controlled">Driver Controlled</string>
     <string name="endgame">Endgame</string>
     <string name="total">Total</string>
+    <string name="example_num">E.g: 12345</string>
+    <string name="example_address">E.g: Adelaide, SA</string>
+    <string name="example_robot_name">E.g: EVE</string>
+    <string name="team_id">Team ID :</string>
+    <string name="location_optional">Location (Hold and drag the marker to change) :</string>
+    <string name="robot_name_optional">Robot Name(Optional) :</string>
 </resources>

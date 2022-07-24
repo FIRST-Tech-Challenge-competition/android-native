@@ -19,11 +19,11 @@
             android:layout_height="wrap_content"
             android:minWidth="48dp"
             android:minHeight="48dp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView64"
+            android:text="@string/shared_hub_tipped"
+            app:layout_constraintBottom_toTopOf="@+id/shipping_hub_balanced"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView64"
-            app:layout_constraintTop_toTopOf="@+id/textView64" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView63" />
 
         <Switch
             android:id="@+id/shipping_hub_balanced"
@@ -31,11 +31,11 @@
             android:layout_height="wrap_content"
             android:minWidth="48dp"
             android:minHeight="48dp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView65"
+            android:text="@string/shipping_hub_balanced"
+            app:layout_constraintBottom_toTopOf="@+id/shipping_hub_capped"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView65"
-            app:layout_constraintTop_toTopOf="@+id/textView65" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shared_hub_tipped" />
 
         <Switch
             android:id="@+id/shipping_hub_capped"
@@ -43,11 +43,11 @@
             android:layout_height="wrap_content"
             android:minWidth="48dp"
             android:minHeight="48dp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView66"
+            android:text="@string/shipping_hub_capped"
+            app:layout_constraintBottom_toTopOf="@+id/textView67"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView66"
-            app:layout_constraintTop_toTopOf="@+id/textView66" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shipping_hub_balanced" />
 
         <Switch
             android:id="@+id/end_parking_warehouse"
@@ -55,18 +55,18 @@
             android:layout_height="wrap_content"
             android:minWidth="48dp"
             android:minHeight="48dp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView68"
+            android:text="@string/warehouse"
+            app:layout_constraintBottom_toTopOf="@+id/end_completely_in_warehouse"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView68"
-            app:layout_constraintTop_toTopOf="@+id/textView68" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView67" />
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/ducks"
-            app:layout_constraintBottom_toTopOf="@+id/textView61"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -79,93 +79,27 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView69" />
-
-        <TextView
-            android:id="@+id/textView61"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ducks_delivered"
-            app:layout_constraintBottom_toTopOf="@+id/textView63"
-            app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+            app:layout_constraintTop_toBottomOf="@+id/end_completely_in_warehouse" />
 
         <TextView
             android:id="@+id/textView63"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/hubs"
-            app:layout_constraintBottom_toTopOf="@+id/textView64"
+            app:layout_constraintBottom_toTopOf="@+id/shared_hub_tipped"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView61" />
-
-        <TextView
-            android:id="@+id/textView64"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/shared_hub_tipped"
-            app:layout_constraintBottom_toTopOf="@+id/textView65"
-            app:layout_constraintEnd_toStartOf="@+id/shared_hub_tipped"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView63" />
-
-        <TextView
-            android:id="@+id/textView65"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/shipping_hub_balanced"
-            app:layout_constraintBottom_toTopOf="@+id/textView66"
-            app:layout_constraintEnd_toStartOf="@+id/shipping_hub_balanced"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView64" />
-
-        <TextView
-            android:id="@+id/textView66"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/shipping_hub_capped"
-            app:layout_constraintBottom_toTopOf="@+id/textView67"
-            app:layout_constraintEnd_toStartOf="@+id/shipping_hub_capped"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView65" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
         <TextView
             android:id="@+id/textView67"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/parking"
-            app:layout_constraintBottom_toTopOf="@+id/textView68"
+            app:layout_constraintBottom_toTopOf="@+id/end_parking_warehouse"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView66" />
-
-        <TextView
-            android:id="@+id/textView68"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/warehouse"
-            app:layout_constraintBottom_toTopOf="@+id/textView69"
-            app:layout_constraintEnd_toStartOf="@+id/end_parking_warehouse"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView67" />
-
-        <TextView
-            android:id="@+id/textView69"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/completely_in_warehouse"
-            app:layout_constraintBottom_toTopOf="@+id/finishGameButton"
-            app:layout_constraintEnd_toStartOf="@+id/end_completely_in_warehouse"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView68" />
+            app:layout_constraintTop_toBottomOf="@+id/shipping_hub_capped" />
 
         <Switch
             android:id="@+id/end_completely_in_warehouse"
@@ -173,11 +107,11 @@
             android:layout_height="wrap_content"
             android:minWidth="48dp"
             android:minHeight="48dp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView69"
+            android:text="@string/completely_in_warehouse"
+            app:layout_constraintBottom_toTopOf="@+id/finishGameButton"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView69"
-            app:layout_constraintTop_toTopOf="@+id/textView69" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/end_parking_warehouse" />
 
         <LinearLayout
             android:id="@+id/linearLayout3"
@@ -185,11 +119,16 @@
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="@+id/textView61"
+            app:layout_constraintBottom_toTopOf="@+id/textView63"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView61"
-            app:layout_constraintTop_toTopOf="@+id/textView61">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+            <TextView
+                android:id="@+id/textView61"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ducks_delivered" />
 
             <TextView
                 android:id="@+id/ducks_delivered_score"
@@ -201,15 +140,15 @@
                 android:id="@+id/ducks_delivered_score_inc"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="@string/plus"
-                android:onClick="@{() -> endGameViewModel.update_ducks_delivered(true)}"/>
+                android:onClick="@{() -> endGameViewModel.update_ducks_delivered(true)}"
+                android:text="@string/plus" />
 
             <Button
                 android:id="@+id/ducks_delivered_score_dec"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="@string/minus"
-                android:onClick="@{() -> endGameViewModel.update_ducks_delivered(false)}"/>
+                android:onClick="@{() -> endGameViewModel.update_ducks_delivered(false)}"
+                android:text="@string/minus" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

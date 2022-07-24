@@ -19,92 +19,92 @@
             android:id="@+id/bonus_duck_used"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checked="false"
             android:minWidth="48dp"
             android:minHeight="48dp"
-            android:checked="false"
-            app:layout_constraintBottom_toBottomOf="@+id/textView47"
+            android:text="@string/used_duck"
+            app:layout_constraintBottom_toTopOf="@+id/bonus_team_score_elem_used"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView47"
-            app:layout_constraintTop_toTopOf="@+id/textView47" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView46" />
 
         <Switch
             android:id="@+id/bonus_team_score_elem_used"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checked="false"
             android:minWidth="48dp"
             android:minHeight="48dp"
-            android:checked="false"
-            app:layout_constraintBottom_toBottomOf="@+id/textView48"
+            android:text="@string/used_team_scoring_element"
+            app:layout_constraintBottom_toTopOf="@+id/driverControlledButton"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView48"
-            app:layout_constraintTop_toTopOf="@+id/textView48" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bonus_duck_used" />
 
         <Switch
             android:id="@+id/parking_storage_unit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checked="false"
             android:minWidth="48dp"
             android:minHeight="48dp"
-            android:checked="false"
-            app:layout_constraintBottom_toBottomOf="@+id/textView40"
+            android:text="@string/completely_in_storage_unit"
+            app:layout_constraintBottom_toTopOf="@+id/parking_warehouse"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView40"
-            app:layout_constraintTop_toTopOf="@+id/textView40" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/parking_alliance_storage_unit" />
 
         <Switch
             android:id="@+id/parking_warehouse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checked="false"
             android:minWidth="48dp"
             android:minHeight="48dp"
-            android:checked="false"
-            app:layout_constraintBottom_toBottomOf="@+id/textView41"
+            android:text="@string/in_warehouse"
+            app:layout_constraintBottom_toTopOf="@+id/parking_completely_warehouse"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView41"
-            app:layout_constraintTop_toTopOf="@+id/textView41" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/parking_storage_unit" />
 
         <Switch
             android:id="@+id/parking_completely_warehouse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checked="false"
             android:minWidth="48dp"
             android:minHeight="48dp"
-            android:checked="false"
-            app:layout_constraintBottom_toBottomOf="@+id/textView42"
+            android:text="@string/completely_in_warehouse"
+            app:layout_constraintBottom_toTopOf="@+id/textView43"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView42"
-            app:layout_constraintTop_toTopOf="@+id/textView42" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/parking_warehouse" />
 
         <Switch
             android:id="@+id/freight_storage_unit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checked="false"
             android:minWidth="48dp"
             android:minHeight="48dp"
-            android:checked="false"
-            app:layout_constraintBottom_toBottomOf="@+id/textView44"
+            android:text="@string/in_alliance_storage_unit"
+            app:layout_constraintBottom_toTopOf="@+id/freight_shipping_hub"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView44"
-            app:layout_constraintTop_toTopOf="@+id/textView44" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView43" />
 
         <Switch
             android:id="@+id/freight_shipping_hub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checked="false"
             android:minWidth="48dp"
             android:minHeight="48dp"
-            android:checked="false"
-            app:layout_constraintBottom_toBottomOf="@+id/textView45"
+            android:text="@string/on_alliance_shipping_hub"
+            app:layout_constraintBottom_toTopOf="@+id/textView46"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView45"
-            app:layout_constraintTop_toTopOf="@+id/textView45" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/freight_storage_unit" />
 
         <Switch
             android:id="@+id/duck_delivered"
@@ -113,20 +113,9 @@
             android:checked="false"
             android:minWidth="48dp"
             android:minHeight="48dp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView6"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView6"
-            app:layout_constraintTop_toTopOf="@+id/textView6" />
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="@string/duck_delivered"
             app:layout_constraintBottom_toTopOf="@+id/textView38"
-            app:layout_constraintEnd_toStartOf="@+id/duck_delivered"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -138,14 +127,15 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView48" />
+            app:layout_constraintTop_toBottomOf="@+id/bonus_team_score_elem_used" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/duck"
-            app:layout_constraintBottom_toTopOf="@+id/textView6"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/duck_delivered"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -155,131 +145,46 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/parking"
-            app:layout_constraintBottom_toTopOf="@+id/textView39"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/parking_alliance_storage_unit"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+            app:layout_constraintTop_toBottomOf="@+id/duck_delivered" />
 
         <Switch
             android:id="@+id/parking_alliance_storage_unit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checked="false"
             android:minWidth="48dp"
             android:minHeight="48dp"
-            android:checked="false"
-            app:layout_constraintBottom_toBottomOf="@+id/textView39"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView39"
-            app:layout_constraintTop_toTopOf="@+id/textView39" />
-
-        <TextView
-            android:id="@+id/textView39"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="@string/in_alliance_storage_unit"
-            app:layout_constraintBottom_toTopOf="@+id/textView40"
-            app:layout_constraintEnd_toStartOf="@+id/parking_alliance_storage_unit"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintBottom_toTopOf="@+id/parking_storage_unit"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView38" />
-
-        <TextView
-            android:id="@+id/textView40"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/completely_in_storage_unit"
-            app:layout_constraintBottom_toTopOf="@+id/textView41"
-            app:layout_constraintEnd_toStartOf="@+id/parking_storage_unit"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView39" />
-
-        <TextView
-            android:id="@+id/textView41"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/in_warehouse"
-            app:layout_constraintBottom_toTopOf="@+id/textView42"
-            app:layout_constraintEnd_toStartOf="@+id/parking_warehouse"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView40" />
-
-        <TextView
-            android:id="@+id/textView42"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/completely_in_warehouse"
-            app:layout_constraintBottom_toTopOf="@+id/textView43"
-            app:layout_constraintEnd_toStartOf="@+id/parking_completely_warehouse"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView41" />
 
         <TextView
             android:id="@+id/textView43"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/freight"
-            app:layout_constraintBottom_toTopOf="@+id/textView44"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/freight_storage_unit"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView42" />
-
-        <TextView
-            android:id="@+id/textView44"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/in_alliance_storage_unit"
-            app:layout_constraintBottom_toTopOf="@+id/textView45"
-            app:layout_constraintEnd_toStartOf="@+id/freight_storage_unit"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView43" />
-
-        <TextView
-            android:id="@+id/textView45"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/on_alliance_shipping_hub"
-            app:layout_constraintBottom_toTopOf="@+id/textView46"
-            app:layout_constraintEnd_toStartOf="@+id/freight_shipping_hub"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView44" />
+            app:layout_constraintTop_toBottomOf="@+id/parking_completely_warehouse" />
 
         <TextView
             android:id="@+id/textView46"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/bonus"
-            app:layout_constraintBottom_toTopOf="@+id/textView47"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/bonus_duck_used"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView45" />
-
-        <TextView
-            android:id="@+id/textView47"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/used_duck"
-            app:layout_constraintBottom_toTopOf="@+id/textView48"
-            app:layout_constraintEnd_toStartOf="@+id/bonus_duck_used"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView46" />
-
-        <TextView
-            android:id="@+id/textView48"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/used_team_scoring_element"
-            app:layout_constraintBottom_toTopOf="@+id/driverControlledButton"
-            app:layout_constraintEnd_toStartOf="@+id/bonus_team_score_elem_used"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView47" />
+            app:layout_constraintTop_toBottomOf="@+id/freight_shipping_hub" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
