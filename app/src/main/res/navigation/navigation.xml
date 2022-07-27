@@ -55,7 +55,15 @@
         android:id="@+id/registerFragment"
         android:name="com.example.freightfrenzy.screens.register.RegisterFragment"
         android:label="RegisterFragment"
-        tools:layout="@layout/fragment_register"/>
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_titleFragment"
+            app:destination="@id/titleFragment"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit" />
+    </fragment>
     <fragment
         android:id="@+id/gameFragment"
         android:name="com.example.freightfrenzy.screens.game.GameFragment"

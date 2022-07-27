@@ -1,6 +1,7 @@
 package com.example.freightfrenzy.screens.register
 
 import android.app.Activity
+import android.app.Application
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
@@ -13,9 +14,14 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import com.example.freightfrenzy.R
+import com.example.freightfrenzy.database.RegisteredTeamDatabaseDao
+import com.example.freightfrenzy.database.RegisteredTeamsDatabase
 import com.example.freightfrenzy.databinding.FragmentRegisterBinding
+import com.example.freightfrenzy.screens.registered_teams.RegisteredTeamsViewModelFactory
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.MapView
@@ -36,8 +42,13 @@ class RegisterFragment: Fragment(), OnMapReadyCallback {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         activity?.setTitle("Team registration")
         val binding: FragmentRegisterBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_register, container, false)
+
+        val application = requireNotNull(this.activity).application
+        val dataSource = RegisteredTeamsDatabase.getInstance(application).registeredTeamDatabaseDao
+        val viewModelFactory = RegisterViewModelFactory(application = application, dataSource = dataSource)
+
         //Get the ViewModel for this fragment
-        registerViewModel = ViewModelProvider(this).get(RegisterViewModel::class.java)
+        registerViewModel = ViewModelProvider(this, viewModelFactory).get(RegisterViewModel::class.java)
         imgView = binding.chooseImage
 
         //Implement mapView
@@ -50,11 +61,9 @@ class RegisterFragment: Fragment(), OnMapReadyCallback {
         binding.chooseImage.setOnClickListener { registerViewModel.uploadImage(imageUploaderLauncher) }
         binding.addImageText.setOnClickListener{ registerViewModel.uploadImage(imageUploaderLauncher) }
 
-        //TODO: Navigation back to main screen, add these info to database (name, id, location, robot's name, Image URI, allow_score_sharing)
         binding.register.setOnClickListener{
-            Log.i("URI is", imageURL.toString())
-            Log.i("Lattitude is", latLong[0].toString())
-            Log.i("Longtitude is", latLong[1].toString())
+            registerViewModel.addingTeam(imageURL, latLong[0], latLong[1], binding.teamName.text.toString(), binding.teamID.text.toString().toInt(), binding.robotName.text.toString())
+            view!!.findNavController().navigate(RegisterFragmentDirections.actionRegisterFragmentToTitleFragment())
         }
         return binding.root
     }
@@ -84,7 +93,9 @@ class RegisterFragment: Fragment(), OnMapReadyCallback {
     }
 
     override fun onMapReady(map: GoogleMap) {
-        if(perm_check()) return
+        var defaultMarker = MarkerOptions().position(LatLng(0.0, 0.0)).title("Marker").draggable(true)
+        map.addMarker(defaultMarker)
+
         //Set up marker drag event
         map.setOnMarkerDragListener(object : GoogleMap.OnMarkerDragListener{
             override fun onMarkerDrag(p0: Marker) {}
@@ -97,9 +108,7 @@ class RegisterFragment: Fragment(), OnMapReadyCallback {
 
             override fun onMarkerDragStart(p0: Marker){}
         })
-
-        var defaultMarker = MarkerOptions().position(LatLng(0.0, 0.0)).title("Marker").draggable(true)
-        map.addMarker(defaultMarker)
+        if(perm_check()) return
     }
 
     override fun onPause() {

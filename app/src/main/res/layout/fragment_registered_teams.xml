@@ -3,25 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <data>
+        <variable
+            name="registeredTeamsViewModel"
+            type="com.example.freightfrenzy.screens.registered_teams.RegisteredTeamsViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/chooseTeamButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Choose selected team"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/searchView3" />
-
         <SearchView
             android:id="@+id/searchView3"
-            android:layout_width="318dp"
+            android:layout_width="0dp"
             android:layout_height="46dp"
-            app:layout_constraintBottom_toTopOf="@+id/chooseTeamButton"
+            app:layout_constraintBottom_toTopOf="@+id/team_list"
             app:layout_constraintEnd_toStartOf="@+id/button13"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -37,6 +33,20 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/searchView3"
             app:layout_constraintTop_toTopOf="@+id/searchView3" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/team_list"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?selectableItemBackground"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchView3"
+            tools:listitem="@layout/text_item_view" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -23,6 +23,8 @@ class TitleFragment: Fragment() {
         //Get the ViewModel for this fragment
         titleViewModel = ViewModelProvider(this).get(TitleViewModel::class.java)
 
+        //TODO: Need to disable going back to sub-pages when going to this title screen.
+
         //Set up navigation for all buttons in the title screen
         binding.aboutButton.setOnClickListener{ view!!.findNavController().navigate(TitleFragmentDirections.actionTitleFragmentToAboutFragment()) }
         binding.gameButton.setOnClickListener{ view!!.findNavController().navigate(TitleFragmentDirections.actionTitleFragmentToGameFragment()) }

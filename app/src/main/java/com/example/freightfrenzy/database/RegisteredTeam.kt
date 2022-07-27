@@ -1,5 +1,6 @@
 package com.example.freightfrenzy.database
 
+import android.net.Uri
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -11,7 +12,7 @@ data class RegisteredTeam (
     var registrationID: Long = 0L,
 
     @ColumnInfo(name = "image_info")
-    var imageInfo: URI? = null,
+    var imageInfo: Uri? = null,
 
     @ColumnInfo(name = "latitude")
     var latitude: Double = 0.0,
