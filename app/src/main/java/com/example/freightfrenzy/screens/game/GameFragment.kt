@@ -16,7 +16,6 @@ class GameFragment: Fragment() {
     private lateinit var gameViewModel: GameViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        activity?.setTitle("Choose a team to play")
         val binding: FragmentGameBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_game, container, false)
 
         //Get the ViewModel for this fragment

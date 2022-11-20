@@ -24,7 +24,7 @@ data class RegisteredTeam (
     var teamName: String = "",
 
     @ColumnInfo(name = "team_id")
-    var teamID: Int,
+    var teamID: Int = 0,
 
     @ColumnInfo(name = "robot_name")
     var robotName: String = ""

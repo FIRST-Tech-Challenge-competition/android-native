@@ -18,12 +18,8 @@ class FinalScoreFragment: Fragment() {
     private lateinit var finalScoreViewModel: FinalScoreViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        activity?.setTitle("Final Result")
         //Get args from Bundle
         var args = FinalScoreFragmentArgs.fromBundle(arguments!!)
-        Log.i("Stage 1 score", args.autonomousScore.toString())
-        Log.i("Stage 2 score", args.driverControlledScore.toString())
-        Log.i("Final stage score", args.endGameScore.toString())
 
         ////Get the ViewModel and data binding for this fragment
         val binding: FragmentFinalScoreBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_final_score, container, false)

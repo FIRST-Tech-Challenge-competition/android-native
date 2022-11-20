@@ -16,7 +16,7 @@ interface RegisteredTeamDatabaseDao {
     fun update(team: RegisteredTeam)
 
     @Query("SELECT * from registered_teams_table WHERE registrationID = :key")
-    fun get(key: Long): RegisteredTeam
+    fun get(key: Long): LiveData<RegisteredTeam>
 
     @Query("DELETE FROM registered_teams_table")
     fun clear()

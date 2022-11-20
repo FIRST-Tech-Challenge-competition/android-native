@@ -15,7 +15,6 @@ class AboutFragment: Fragment() {
     private lateinit var viewModel: AboutViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        activity?.setTitle("About")
         val binding: FragmentAboutBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_about, container, false)
 
         //Get ViewModel for this fragment

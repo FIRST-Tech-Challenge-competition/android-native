@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/titleFragment"
         android:name="com.example.freightfrenzy.screens.title.TitleFragment"
-        android:label="TitleFragment"
+        android:label="Freight Frenzy"
         tools:layout="@layout/fragment_title">
         <action
             android:id="@+id/action_titleFragment_to_registerFragment"
@@ -49,12 +49,12 @@
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.example.freightfrenzy.screens.about.AboutFragment"
-        android:label="AboutFragment"
-        tools:layout="@layout/fragment_about"/>
+        android:label="About"
+        tools:layout="@layout/fragment_about" />
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.freightfrenzy.screens.register.RegisterFragment"
-        android:label="RegisterFragment"
+        android:label="Team registration"
         tools:layout="@layout/fragment_register">
         <action
             android:id="@+id/action_registerFragment_to_titleFragment"
@@ -67,7 +67,7 @@
     <fragment
         android:id="@+id/gameFragment"
         android:name="com.example.freightfrenzy.screens.game.GameFragment"
-        android:label="GameFragment"
+        android:label="Choose a team to play"
         tools:layout="@layout/fragment_game">
         <action
             android:id="@+id/action_gameFragment_to_autonomousFragment"
@@ -80,12 +80,12 @@
     <fragment
         android:id="@+id/highScoreFragment"
         android:name="com.example.freightfrenzy.screens.high_score.HighScoreFragment"
-        android:label="HighScoreFragment"
-        tools:layout="@layout/fragment_high_score"/>
+        android:label="Team information"
+        tools:layout="@layout/fragment_high_score" />
     <fragment
         android:id="@+id/autonomousFragment"
         android:name="com.example.freightfrenzy.screens.autonomous.AutonomousFragment"
-        android:label="AutonomousFragment"
+        android:label="Stage 1: Autonomous"
         tools:layout="@layout/fragment_autonomous">
         <action
             android:id="@+id/action_autonomousFragment_to_driverControlledFragment"
@@ -98,7 +98,7 @@
     <fragment
         android:id="@+id/driverControlledFragment"
         android:name="com.example.freightfrenzy.screens.driver_controlled.DriverControlledFragment"
-        android:label="DriverControlledFragment"
+        android:label="Stage 2: Driver-Controlled"
         tools:layout="@layout/fragment_driver_controlled">
         <action
             android:id="@+id/action_driverControlledFragment_to_endGameFragment"
@@ -114,7 +114,7 @@
     <fragment
         android:id="@+id/endGameFragment"
         android:name="com.example.freightfrenzy.screens.endgame.EndGameFragment"
-        android:label="EndGameFragment"
+        android:label="Final stage: End Game"
         tools:layout="@layout/fragment_endgame">
         <action
             android:id="@+id/action_endGameFragment_to_finalScoreFragment"
@@ -123,7 +123,8 @@
             app:exitAnim="@anim/exit"
             app:popEnterAnim="@anim/pop_enter"
             app:popExitAnim="@anim/pop_exit" />
-        <argument android:name="autonomous_score"
+        <argument
+            android:name="autonomous_score"
             app:argType="integer" />
         <argument
             android:name="driver_controlled_score"
@@ -132,7 +133,7 @@
     <fragment
         android:id="@+id/finalScoreFragment"
         android:name="com.example.freightfrenzy.screens.final_score.FinalScoreFragment"
-        android:label="FinalScoreFragment"
+        android:label="Final Result"
         tools:layout="@layout/fragment_final_score">
         <action
             android:id="@+id/action_finalScoreFragment_to_titleFragment"
@@ -154,7 +155,7 @@
     <fragment
         android:id="@+id/registeredTeamsFragment"
         android:name="com.example.freightfrenzy.screens.registered_teams.RegisteredTeamsFragment"
-        android:label="RegisteredTeamsFragment"
+        android:label="Registered Teams"
         tools:layout="@layout/fragment_registered_teams">
         <action
             android:id="@+id/action_registeredTeamsFragment_to_registeredTeamFragment"
@@ -167,12 +168,16 @@
     <fragment
         android:id="@+id/registeredTeamFragment"
         android:name="com.example.freightfrenzy.screens.registered_team.RegisteredTeamFragment"
-        android:label="RegisteredTeamFragment"
-        tools:layout="@layout/fragment_registered_team"/>
+        android:label="Team profile"
+        tools:layout="@layout/fragment_registered_team" >
+        <argument
+            android:name="registrationID"
+            app:argType="long" />
+    </fragment>
     <fragment
         android:id="@+id/highScoresFragment"
         android:name="com.example.freightfrenzy.screens.high_scores.HighScoresFragment"
-        android:label="HighScoresFragment"
+        android:label="High scores"
         tools:layout="@layout/fragment_high_scores">
         <action
             android:id="@+id/action_highScoresFragment_to_highScoreFragment"

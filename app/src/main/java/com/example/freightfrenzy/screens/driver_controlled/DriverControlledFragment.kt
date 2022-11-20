@@ -19,7 +19,6 @@ class DriverControlledFragment: Fragment() {
     private lateinit var driverControlledViewModel: DriverControlledViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        activity?.setTitle("Stage 2: Driver-Controlled")
         val binding: FragmentDriverControlledBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_driver_controlled, container, false)
 
         //Get the ViewModel for this fragment
@@ -32,7 +31,6 @@ class DriverControlledFragment: Fragment() {
 
         //Get args from Bundle
         var args = DriverControlledFragmentArgs.fromBundle(arguments!!)
-        Log.i("Stage 1 score", args.autonomousScore.toString())
 
         //Set up navigation for all button(s) on the screen
         binding.toEndGameButton.setOnClickListener{ view!!.findNavController().navigate(DriverControlledFragmentDirections.actionDriverControlledFragmentToEndGameFragment(args.autonomousScore, driverControlledViewModel.calculate_score())) }

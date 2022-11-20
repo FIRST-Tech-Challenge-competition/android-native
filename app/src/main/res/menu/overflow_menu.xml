@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/highScoresFragment"
+        android:title="High scores table" />
+    <item
+        android:id="@+id/aboutFragment"
+        android:title="About the app" />
+    <item
+        android:id="@+id/registeredTeamsFragment"
+        android:title="Registerted Teams Info" />
+</menu>

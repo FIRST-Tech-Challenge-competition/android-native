@@ -16,14 +16,13 @@ class HighScoresFragment: Fragment() {
     private lateinit var highScoresViewModel: HighScoresViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        activity?.setTitle("High scores")
         val binding: FragmentHighScoresBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_high_scores, container, false)
 
         //Get the ViewModel for this fragment
         highScoresViewModel = ViewModelProvider(this).get(HighScoresViewModel::class.java)
 
         //Set up navigation for all buttons in the screen
-        binding.selectHighScoreTeam.setOnClickListener{ view!!.findNavController().navigate(HighScoresFragmentDirections.actionHighScoresFragmentToHighScoreFragment()) }
+        //binding.selectHighScoreTeam.setOnClickListener{ view!!.findNavController().navigate(HighScoresFragmentDirections.actionHighScoresFragmentToHighScoreFragment()) }
         return binding.root
     }
 }

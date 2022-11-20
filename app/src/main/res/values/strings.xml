@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Freight Frenzy</string>
-    <string name="register_text">Register</string>
+    <string name="register_text">Register a team</string>
     <string name="play_a_game_text">Play a game</string>
     <string name="list_team_score_txt">Registered Teams</string>
     <string name="high_score_txt">High Score</string>

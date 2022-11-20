@@ -17,7 +17,6 @@ class AutonomousFragment: Fragment() {
     private lateinit var autonomousViewModel: AutonomousViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        activity?.setTitle("Stage 1: Autonomous")
         val binding: FragmentAutonomousBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_autonomous, container, false)
 
         //Get the ViewModel for this fragment

@@ -18,7 +18,6 @@ class EndGameFragment: Fragment() {
     private lateinit var endGameViewModel: EndGameViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        activity?.setTitle("Final stage: End Game")
         val binding: FragmentEndgameBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_endgame, container, false)
 
         //Get the ViewModel for this fragment
@@ -31,8 +30,6 @@ class EndGameFragment: Fragment() {
 
         //Get args from Bundle
         var args = EndGameFragmentArgs.fromBundle(arguments!!)
-        Log.i("Stage 1 score", args.autonomousScore.toString())
-        Log.i("Stage 2 score", args.driverControlledScore.toString())
 
         //Set up navigation for all button(s) on the screen
         binding.finishGameButton.setOnClickListener { view!!.findNavController().navigate(EndGameFragmentDirections.actionEndGameFragmentToFinalScoreFragment(args.autonomousScore, args.driverControlledScore, endGameViewModel.calculate_score(mapOf(

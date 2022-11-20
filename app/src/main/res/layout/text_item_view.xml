@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/border_img"
-    android:paddingStart="16dp"
-    android:paddingEnd="16dp"
-    android:textSize="24sp" />
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="team"
+            type="com.example.freightfrenzy.database.RegisteredTeam" />
+        <variable
+            name="clickListener"
+            type="com.example.freightfrenzy.screens.registered_teams.RegisteredTeamListener"/>
+    </data>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_img"
+        android:onClick="@{() -> clickListener.onClick(team)}"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textSize="24sp"
+        android:text="@{clickListener.formatContent(team)}"/>
+</layout>

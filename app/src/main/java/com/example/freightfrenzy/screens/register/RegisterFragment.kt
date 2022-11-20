@@ -40,7 +40,6 @@ class RegisterFragment: Fragment(), OnMapReadyCallback {
     private var latLong: Array<Double> = arrayOf(0.0, 0.0)
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        activity?.setTitle("Team registration")
         val binding: FragmentRegisterBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_register, container, false)
 
         val application = requireNotNull(this.activity).application
@@ -62,6 +61,13 @@ class RegisterFragment: Fragment(), OnMapReadyCallback {
         binding.addImageText.setOnClickListener{ registerViewModel.uploadImage(imageUploaderLauncher) }
 
         binding.register.setOnClickListener{
+            //TODO: Need to handle special inputs here, need to requires image, team name and id
+            Log.i("Image URL", imageURL.toString())
+            Log.i("latLong", latLong.toString())
+            Log.i("Team Name: ", binding.teamName.text.toString())
+            Log.i("Team ID: ", binding.teamID.text.toString())
+            Log.i("Robot name: ", binding.robotName.text.toString())
+
             registerViewModel.addingTeam(imageURL, latLong[0], latLong[1], binding.teamName.text.toString(), binding.teamID.text.toString().toInt(), binding.robotName.text.toString())
             view!!.findNavController().navigate(RegisterFragmentDirections.actionRegisterFragmentToTitleFragment())
         }
@@ -128,6 +134,12 @@ class RegisterFragment: Fragment(), OnMapReadyCallback {
 
     //Check ACCESS_FINE_LOCATION and ACCESS_COARSE_LOCATION permissions, this is set in AndroidManifest
     fun perm_check(): Boolean{
-        return ActivityCompat.checkSelfPermission(activity!!, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED || ActivityCompat.checkSelfPermission(activity!!, android.Manifest.permission.ACCESS_COARSE_LOCATION)!= PackageManager.PERMISSION_GRANTED
+        return ActivityCompat.checkSelfPermission(
+            activity!!,
+            android.Manifest.permission.ACCESS_FINE_LOCATION
+        ) != PackageManager.PERMISSION_GRANTED || ActivityCompat.checkSelfPermission(
+            activity!!,
+            android.Manifest.permission.ACCESS_COARSE_LOCATION
+        )!= PackageManager.PERMISSION_GRANTED
     }
 }

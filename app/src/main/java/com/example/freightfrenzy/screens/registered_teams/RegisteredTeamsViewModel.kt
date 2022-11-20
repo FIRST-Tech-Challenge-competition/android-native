@@ -2,6 +2,7 @@ package com.example.freightfrenzy.screens.registered_teams
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import com.example.freightfrenzy.database.RegisteredTeamDatabaseDao
@@ -20,7 +21,8 @@ class RegisteredTeamsViewModel(
         viewModelJob.cancel()
     }
 
-    private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
+    private val uiScope = CoroutineScope(Dispatchers.IO + viewModelJob)
 
+    //TODO: Might need to some coroutine stuff here for optimization
     val teams = database.getAllTeams()
 }

@@ -14,7 +14,6 @@ class HighScoreFragment: Fragment() {
     private lateinit var highScoreViewModel: HighScoreViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        activity?.setTitle("Team information")
         val binding: FragmentHighScoreBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_high_score, container, false)
 
         //Get the ViewModel for this fragment
