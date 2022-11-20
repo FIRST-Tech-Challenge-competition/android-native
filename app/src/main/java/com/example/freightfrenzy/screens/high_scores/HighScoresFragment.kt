@@ -1,11 +1,13 @@
 package com.example.freightfrenzy.screens.high_scores
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
@@ -20,6 +22,11 @@ class HighScoresFragment: Fragment() {
 
         //Get the ViewModel for this fragment
         highScoresViewModel = ViewModelProvider(this).get(HighScoresViewModel::class.java)
+        highScoresViewModel.response.observe(viewLifecycleOwner, Observer {
+            it?.let {
+                Log.i("Fetched data", it)
+            }
+        })
 
         //Set up navigation for all buttons in the screen
         //binding.selectHighScoreTeam.setOnClickListener{ view!!.findNavController().navigate(HighScoresFragmentDirections.actionHighScoresFragmentToHighScoreFragment()) }
