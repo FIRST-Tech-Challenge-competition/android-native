@@ -2,32 +2,34 @@ package com.example.freightfrenzy.screens.registered_team
 
 import android.app.Application
 import android.net.Uri
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import com.example.freightfrenzy.database.RegisteredTeam
 import com.example.freightfrenzy.database.RegisteredTeamDatabaseDao
 import kotlinx.coroutines.*
 
 class RegisteredTeamViewModel(
     val database: RegisteredTeamDatabaseDao,
-    val registrationId: Long,
-    application: Application): AndroidViewModel(application) {
+    val registrationId: Long): ViewModel() {
+
+    private var _teamInfo = MutableLiveData<RegisteredTeam>()
+    val teamInfo: LiveData<RegisteredTeam>
+        get() = _teamInfo
 
     private var viewModelJob = Job()
+    private val coroutineScope = CoroutineScope(Dispatchers.IO + viewModelJob)
 
     override fun onCleared() {
         super.onCleared()
         viewModelJob.cancel()
     }
 
-    private val uiScope = CoroutineScope(Dispatchers.IO + viewModelJob)
+    init {
+        coroutineScope.launch {
+            _teamInfo.postValue(database.get(registrationId))
+        }
+    }
 
-    //TODO: Might need to some coroutine stuff here for optimization
-    val teamInfo = database.get(registrationId)
-
-    //TODO: Complete these 2 methods
+    //TODO: Complete these 2 methods, if needed
     fun getLocation(latitude: Double, longtitude: Double): String{
         return ""
     }

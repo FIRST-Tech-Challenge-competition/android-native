@@ -9,13 +9,12 @@ import com.example.freightfrenzy.screens.registered_teams.RegisteredTeamsViewMod
 
 class RegisteredTeamViewModelFactory(
     private val database: RegisteredTeamDatabaseDao,
-    private val registrationId: Long,
-    private val application: Application): ViewModelProvider.Factory {
+    private val registrationId: Long): ViewModelProvider.Factory {
 
     @Suppress("unchecked_cast")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if(modelClass.isAssignableFrom(RegisteredTeamViewModel::class.java)){
-            return RegisteredTeamViewModel(database, registrationId, application) as T
+            return RegisteredTeamViewModel(database, registrationId) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }

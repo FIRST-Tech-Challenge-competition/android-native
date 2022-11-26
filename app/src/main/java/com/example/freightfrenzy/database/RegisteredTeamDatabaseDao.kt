@@ -16,11 +16,11 @@ interface RegisteredTeamDatabaseDao {
     fun update(team: RegisteredTeam)
 
     @Query("SELECT * from registered_teams_table WHERE registrationID = :key")
-    fun get(key: Long): LiveData<RegisteredTeam>
+    fun get(key: Long): RegisteredTeam
 
     @Query("DELETE FROM registered_teams_table")
     fun clear()
 
     @Query("SELECT * FROM registered_teams_table ORDER BY registrationID DESC")
-    fun getAllTeams(): LiveData<List<RegisteredTeam>>
+    fun getAllTeams(): List<RegisteredTeam>
 }

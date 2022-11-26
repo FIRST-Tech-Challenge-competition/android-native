@@ -5,14 +5,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.freightfrenzy.database.RegisteredTeamDatabaseDao
 
-class RegisteredTeamsViewModelFactory(
-    private val dataSource: RegisteredTeamDatabaseDao,
-    private val application: Application): ViewModelProvider.Factory {
+class RegisteredTeamsViewModelFactory(private val dataSource: RegisteredTeamDatabaseDao): ViewModelProvider.Factory {
 
     @Suppress("unchecked_cast")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if(modelClass.isAssignableFrom(RegisteredTeamsViewModel::class.java)){
-            return RegisteredTeamsViewModel(dataSource, application) as T
+            return RegisteredTeamsViewModel(dataSource) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }

@@ -1,36 +1,50 @@
 package com.example.freightfrenzy.screens.high_scores
 
+import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+import com.example.freightfrenzy.utility.FrenzyAPI
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.launch
 
 class HighScoresViewModel: ViewModel() {
 
-    private val _response = MutableLiveData<String>()
+    private val _response = MutableLiveData<List<TeamProperty>>()
 
     // The external immutable LiveData for the request status String
-    val response: LiveData<String>
+    val response: LiveData<List<TeamProperty>>
         get() = _response
 
-    /**
-     * Call getMarsRealEstateProperties() on init so we can display status immediately.
-     */
+    //Create coroutine job and scope, since we work with coroutine.
+    //TODO: Find out why this one can run on Main and DB operations (RegisteredTeams) can't
+    private var viewModelJob = Job()
+    private var coroutineScope = CoroutineScope(viewModelJob + Dispatchers.Main)
+
     init {
         getHighScoreTeams()
     }
 
+    //Change to coroutine exception handling stuff instead
     private fun getHighScoreTeams() {
-        FrenzyAPI.frenzyService.getTeams().enqueue( object: Callback<String> {
-            override fun onFailure(call: Call<String>, t: Throwable) {
-                _response.value = "Failure: " + t.message
+        coroutineScope.launch {
+            var getPropertiesDeferred = FrenzyAPI.frenzyService.getTeams()
+            try {
+                var result = getPropertiesDeferred.await()
+                _response.value = result
+            } catch (e: Throwable){
+                //Failed case
+                Log.e("API error", "No team found")
             }
+        }
+    }
 
-            override fun onResponse(call: Call<String>, response: Response<String>) {
-                _response.value = response.body()
-            }
-        })
+    //Cancel the job when API is done loading
+    override fun onCleared() {
+        super.onCleared()
+        viewModelJob.cancel()
     }
 }

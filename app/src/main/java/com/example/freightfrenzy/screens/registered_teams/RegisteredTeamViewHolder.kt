@@ -7,17 +7,17 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.freightfrenzy.R
 import com.example.freightfrenzy.database.RegisteredTeam
-import com.example.freightfrenzy.databinding.TextItemViewBinding
+import com.example.freightfrenzy.databinding.RegisteredTeamItemViewBinding
 import com.example.freightfrenzy.generated.callback.OnClickListener
 
-class RegisteredTeamViewHolder private constructor(val binding: TextItemViewBinding): RecyclerView.ViewHolder(binding.root) {
+class RegisteredTeamViewHolder private constructor(val binding: RegisteredTeamItemViewBinding): RecyclerView.ViewHolder(binding.root) {
 
     //This is used to not changed the class implementation, and make constructor private too
     companion object {
         //This method is used to create an instance of ViewHolder with a binding object
         fun create(parent: ViewGroup): RegisteredTeamViewHolder{
             val layoutInflater = LayoutInflater.from(parent.context)
-            val binding = TextItemViewBinding.inflate(layoutInflater, parent, false)
+            val binding = RegisteredTeamItemViewBinding.inflate(layoutInflater, parent, false)
             return RegisteredTeamViewHolder(binding)
         }
     }

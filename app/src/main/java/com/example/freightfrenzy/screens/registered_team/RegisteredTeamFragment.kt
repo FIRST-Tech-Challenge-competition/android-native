@@ -27,7 +27,7 @@ class RegisteredTeamFragment: Fragment() {
         var args = RegisteredTeamFragmentArgs.fromBundle(arguments!!)
         val application = requireNotNull(this.activity).application
         val dataSource = RegisteredTeamsDatabase.getInstance(application).registeredTeamDatabaseDao
-        val viewModelFactory = RegisteredTeamViewModelFactory(dataSource, args.registrationID, application)
+        val viewModelFactory = RegisteredTeamViewModelFactory(dataSource, args.registrationID)
 
         registeredTeamViewModel = ViewModelProvider(this, viewModelFactory).get(RegisteredTeamViewModel::class.java)
         binding.setLifecycleOwner(viewLifecycleOwner)

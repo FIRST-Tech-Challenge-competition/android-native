@@ -26,7 +26,7 @@ class RegisteredTeamsFragment: Fragment() {
         //Get the ViewModel for this fragment with the factory, and add in the database
         val application = requireNotNull(this.activity).application
         val dataSource = RegisteredTeamsDatabase.getInstance(application).registeredTeamDatabaseDao
-        val viewModelFactory = RegisteredTeamsViewModelFactory(dataSource, application)
+        val viewModelFactory = RegisteredTeamsViewModelFactory(dataSource)
 
         registeredTeamsViewModel = ViewModelProvider(this, viewModelFactory).get(RegisteredTeamsViewModel::class.java)
         binding.setLifecycleOwner(viewLifecycleOwner)
